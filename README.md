@@ -64,7 +64,7 @@ PARTIE 5
 
 
 
-Jour 1: Retour sur les bases : algorithmique(suite)
+Jour 2: Retour sur les bases : algorithmique(suite)
 
 PARTIE 6 (LES TABLEAUX) ---------------------------------------------------------------------------------------- 49
 1. Utilité des tableaux -------------------------------------------------------------------------------------------------------- 49
