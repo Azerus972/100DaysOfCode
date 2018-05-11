@@ -1,0 +1,663 @@
+Exercice 6.1
+Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs numériques en les
+mettant toutes à zéro.
+
+Debut
+Pour i ← 0 à 6
+Truc(i) ← 0
+i Suivant
+Fin
+
+Exercice 6.2
+Ecrire un algorithme qui déclare et remplisse un tableau contenant les six voyelles de
+l’alphabet latin.
+
+Debut
+Truc(0) ← ”a“
+Truc(1) ← ”e“
+Truc(2) ← ”i“
+Truc(3) ← ”o“
+Truc(4) ← ”u“
+Truc(5) ← ”y“
+Fin
+
+Exercice 6.3
+Ecrire un algorithme qui déclare un tableau de 9 notes, dont on fait ensuite saisir les valeurs
+par l’utilisateur.
+
+Tableau Notes(8) en Entier
+Variable i en Entier
+Début
+Pour i ← 0 à 8
+Ecrire "Entrez la note numéro ", i + 1
+Lire Notes(i)
+i Suivant
+Fin
+
+Exercice 6.4
+Que produit l’algorithme suivant ?
+Tableau Nb(5) en Entier
+Variable i en Entier
+Début
+Pour i ← 0 à 5
+Nb(i) ← i * i
+i Suivant
+Pour i ← 0 à 5
+Ecrire Nb(i)
+i Suivant
+Fin
+Peut-on simplifier cet algorithme avec le même résultat ?
+
+0, 1, 4, 9, 16, 25 et les ecrit
+
+//
+Tableau Nb(5) en Entier
+Variable i en Entier
+Début
+Pour i ← 0 à 5
+Nb(i) ← i * i
+Ecrire Nb(i)
+i Suivant
+Fin
+//
+
+
+Exercice 6.5
+Que produit l’algorithme suivant ?
+Tableau N(6) en Entier
+Variables i, k en Entier
+Début
+N(0) ← 1
+Pour k ← 1 à 6
+N(k) ← N(k-1) + 2
+k Suivant
+Pour i ← 0 à 6
+Ecrire N(i)
+i Suivant
+Fin
+Peut-on simplifier cet algorithme avec le même résultat ?
+
+1, 3, 5, 7, 9, 11, 13 et les ecrit 
+
+//
+Tableau N(6) en Entier
+Variables i, k en Entier
+Début
+N(0) ← 1
+Ecrire N(0)
+Pour k ← 1 à 6
+N(k) ← N(k-1) + 2
+Ecrire N(k)
+k Suivant
+Fin
+//
+
+
+
+
+Exercice 6.6
+Que produit l’algorithme suivant ?
+Tableau Suite(7) en Entier
+Variable i en Entier
+Début
+Suite(0) ← 1
+Suite(1) ← 1
+Pour i ← 2 à 7
+Suite(i) ← Suite(i-1) + Suite(i-2)
+i suivant
+Pour i ← 0 à 7
+Ecrire Suite(i)
+i suivant
+Fin
+
+1, 1, 2, 3, 5, 8, 13, 21
+
+
+Exercice 6.7
+Ecrivez la fin de l’algorithme 6.3 afin que le calcul de la moyenne des notes soit effectué et affiché à
+l’écran.
+
+//
+Variable S en Entier
+Tableau Notes(8) en Entier
+Debut
+s ← 0
+Pour i ← 0 à 8
+Ecrire “Entrez la note n° “, i + 1
+Lire Notes(i)
+s ← s + Notes(i)
+i Suivant
+Ecrire “Moyenne : “, s/9
+Fin
+//
+
+Exercice 6.8
+Ecrivez un algorithme permettant à l’utilisateur de saisir un nombre quelconque de valeurs, qui
+devront être stockées dans un tableau. L’utilisateur doit donc commencer par entrer le nombre de
+valeurs qu’il compte saisir. Il effectuera ensuite cette saisie. Enfin, une fois la saisie terminée, le
+programme affichera le nombre de valeurs négatives et le nombre de valeurs positives.
+
+//
+
+Variables Nb, Nbpos, Nbneg en Entier
+Tableau T() en Entier
+Debut
+Ecrire “Entrez le nombre de valeurs :“
+Lire Nb
+Redim T(Nb - 1)
+Nbpos ← 0
+Nbneg ← 0
+Pour i ← 0 à Nb - 1
+Ecrire “Entrez le nombre n° “, i + 1
+Lire T(i)
+Si T(i) > 0 alors
+Nbpos ← Nbpos + 1
+Sinon
+Nbneg ← Nbneg + 1
+Finsi
+i Suivant
+Ecrire “Nombre de valeurs positives : “, Nbpos
+Ecrire “Nombre de valeurs négatives : “, Nbneg
+Fin
+
+//
+
+Exercice 6.9
+Ecrivez un algorithme calculant la somme des valeurs d’un tableau (on suppose que le tableau a été
+préalablement saisi).
+
+
+
+Exercice 6.10
+Ecrivez un algorithme constituant un tableau, à partir de deux tableaux de même longueur
+préalablement saisis. Le nouveau tableau sera la somme des éléments des deux tableaux de départ.
+Exemple :
+Tableau 1 : 4 – 8 – 7 – 9 – 1 – 5 – 4 – 6
+Tableau 2 : 7 – 6 – 5 – 2 – 1 – 3 – 7 – 4
+Tableau à constituer : 11 – 14 – 12 – 11 – 2 – 8 – 11 - 10
+
+Debut
+Redim T3(N - 1)
+Pour i ← 0 à N - 1
+T3(i) ← T1(i) + T2(i)
+i Suivant
+Fin
+
+Exercice 6.11
+Toujours à partir de deux tableaux précédemment saisis, écrivez un algorithme qui calcule le
+schtroumpf des deux tableaux. Pour calculer le schtroumpf, il faut multiplier chaque élément du
+tableau 1 par chaque élément du tableau 2, et additionner le tout.
+Exemple :
+Tableau 1 : 4 – 8 – 7 - 12
+Tableau 2 : 3 – 6
+Le Schtroumpf :
+3*4 + 3*8 + 3*7 + 3*12 + 6*4 + 6*8 + 6*7 + 6*12 = 279
+
+
+
+Exercice 6.12
+Ecrivez un algorithme qui permette la saisie d’un nombre quelconque de valeurs, sur le principe de
+l’ex 6.8. Toutes les valeurs doivent être ensuite augmentées de 1, et le nouveau tableau sera affiché à
+l’écran.
+
+Variables Nb, i en Entier
+Tableau T() en Entier
+Debut
+Ecrire “Entrez le nombre de valeurs :“
+Lire Nb
+Redim T(Nb - 1)
+Pour i ← 0 à Nb - 1
+Ecrire “Entrez le nombre n° “, i + 1
+Lire T(i)
+i Suivant
+Ecrire "Nouveau tableau :"
+Pour i ← 0 à Nb – 1
+T(i) ← T(i) + 1
+Ecrire T(i)
+i Suivant
+Fin
+
+Exercice 6.13
+Ecrivez un algorithme permettant, toujours sur le même principe, à l’utilisateur de saisir un nombre
+déterminé de valeurs. Le programme, une fois la saisie terminée, renvoie la plus grande valeur en
+précisant quelle position elle occupe dans le tableau. On prendra soin d’effectuer la saisie dans un
+premier temps, et la recherche de la plus grande valeur du tableau dans un second temps.
+
+Variables Nb, max en Entier
+Tableau T() en Entier
+Ecrire “Entrez le nombre de valeurs :“
+Lire Nb
+Redim T(Nb - 1)
+Pour i ← 0 à Nb - 1
+Ecrire “Entrez le nombre n° “, i + 1
+Lire T(i)
+i Suivant
+max ← 0
+Pour i ← 0 à Nb - 1
+Si T(i) > T(max) alors
+max ← i
+Finsi
+i Suivant
+Ecrire “Element le plus grand : “, T(max)
+Ecrire “Position de cet élément : “, max
+Fin
+
+Exercice 6.14
+Toujours et encore sur le même principe, écrivez un algorithme permettant, à l’utilisateur de saisir
+les notes d'une classe. Le programme, une fois la saisie terminée, renvoie le nombre de ces notes
+supérieures à la moyenne de la classe.
+
+//
+Variables Nb, i, Som, Moy, Nbsup en Entier
+Tableau T() en Entier
+Debut
+Ecrire “Entrez le nombre de notes à saisir : “
+Lire Nb
+Redim T(Nb - 1)
+Pour i ← 0 à Nb - 1
+Ecrire “Entrez le nombre n° “, i + 1
+Lire T(i)
+i Suivant
+Som ← 0
+Pour i ← 0 à Nb - 1
+Som ← Som + T(i)
+i Suivant
+Moy ← Som / Nb
+NbSup ← 0
+Pour i ← 0 à Nb - 1
+Si T(i) > Moy Alors
+NbSup ← NbSup + 1
+FinSi
+i Suivant
+Ecrire NbSup, " élèves dépassent la moyenne de la classe"
+Fin
+
+//
+
+Exercice 7.1
+Ecrivez un algorithme qui permette de saisir un nombre quelconque de valeurs, et qui les
+range au fur et à mesure dans un tableau. Le programme, une fois la saisie terminée, doit dire
+si les éléments du tableau sont tous consécutifs ou non.
+Par exemple, si le tableau est : 12 - 13 - 14 - 15 - 16 - 17 - 18, ses éléments sont tous consécutifs.
+Si le tableau est : 9 - 10 - 11 - 15 - 16 - 17, ses éléments ne sont pas tous consécutifs.
+
+//
+Variables Nb, i en Entier
+Variable Flag en Booleen
+Tableau T() en Entier
+Debut
+Ecrire “Entrez le nombre de valeurs :“
+Lire Nb
+Redim T(Nb - 1)
+Pour i ← 0 à Nb - 1
+Ecrire “Entrez le nombre n° “, i + 1
+Lire T(i)
+i Suivant
+Flag ← Vrai
+Pour i ← 1 à Nb - 1
+Si T(i) <> T(i – 1) + 1 Alors
+Flag ← Faux
+FinSi
+i Suivant
+Si Flag Alors
+Ecrire "Les nombres sont consécutifs"
+Sinon
+Ecrire "Les nombres ne sont pas consécutifs"
+FinSi
+Fin
+Cette programmation est sans doute la plus spontanée, mais elle présente le défaut d'examiner la
+totalité du tableau, même lorsqu'on découvre dès le départ deux éléments non consécutifs. Aussi,
+dans le cas d'un grand tableau, est-elle dispendieuse en temps de traitement. Une autre manière
+de procéder serait de sortir de la boucle dès que deux éléments non consécutifs sont détectés.
+La deuxième partie de l'algorithme deviendrait donc :
+i ← 1
+TantQue T(i) = T(i – 1) + 1 et i < Nb - 1
+i ← i + 1
+FinTantQue
+Si T(i) = T(i – 1) + 1 Alors
+Ecrire "Les nombres sont consécutifs"
+Sinon
+Ecrire "Les nombres ne sont pas consécutifs"
+FinSi
+//
+
+Exercice 7.2
+Ecrivez un algorithme qui trie un tableau dans l’ordre décroissant
+Vous écrirez bien entendu deux versions de cet algorithme, l'une employant le tri par
+insertion, l'autre le tri à bulles.
+
+Pour i ← 0 à N - 2
+max = i
+Pour j ← i + 1 à N - 1
+Si t(j) > t(max) alors
+max ← j
+Finsi
+j suivant
+temp ← t(max)
+t(max) ← t(i)
+t(i) ← temp
+i suivant
+Fin
+
+//
+Tri à bulles :
+…
+Yapermut ← Vrai
+TantQue Yapermut
+Yapermut ← Faux
+Pour i ← 0 à N - 2
+Si t(i) < t(i + 1) Alors
+temp ← t(i)
+t(i) ← t(i + 1)
+t(i + 1) ← temp
+Yapermut ← Vrai
+Finsi
+i suivant
+FinTantQue
+Fin
+//
+
+
+Exercice 7.3
+Ecrivez un algorithme qui inverse l’ordre des éléments d’un tableau dont on suppose qu'il a
+été préalablement saisi (« les premiers seront les derniers… »)
+
+Pour i ← 0 à (N-1)/2
+temp ← t(i)
+t(i) ← t(N-1-i)
+t(N-1-i) ← temp
+i suivant
+Fin
+
+Exercice 7.4
+Ecrivez un algorithme qui permette à l’utilisateur de supprimer une valeur d’un tableau
+préalablement saisi. L’utilisateur donnera l’indice de la valeur qu’il souhaite supprimer.
+Attention, il ne s’agit pas de remettre une valeur à zéro, mais bel et bien de la supprimer du
+tableau lui-même ! Si le tableau de départ était
+12 – 8 – 4 – 45 – 64 – 9 – 2 – 7
+Et que l’utilisateur souhaite supprimer la valeur d’indice 4, le nouveau tableau sera :
+12 – 8 – 4 – 45 – 9 – 2 - 7
+
+//
+Pour un tel traitement, on n'aura pas le choix ; il va falloir passer par un deuxième tableau,
+temporaire. L'algorithme qui suit suppose que le tableau T, comptant N éléments, a déjà été saisi.
+…
+Ecrire "Rang de la valeur à supprimer ?"
+Lire S
+Redim Temp(N – 2)
+Pour i ← 0 à N - 1
+Si i < S Alors
+Temp(i) ← T(i)
+SinonSi i > S Alors
+Temp(i-1) ← T(i)
+Finsi
+i suivant
+On recopie Temp dans T
+Redim T(N – 2)
+Pour i ← 0 à N - 2
+T(i) ← Temp(i)
+i suivant
+Fin
+//
+
+Exercice 7.5
+Ecrivez l'algorithme qui recherche un mot saisi au clavier dans un dictionnaire. Le dictionnaire
+est supposé être codé dans un tableau préalablement rempli et trié.
+
+
+
+
+Exercice 8.1
+Ecrivez un algorithme remplissant un tableau de 6 sur 13, avec des zéros.
+
+Debut
+Pour i ← 0 à 5
+Pour j ← 0 à 12
+tab(i, j) ← 0
+j Suivant
+i Suivant
+Fin
+
+
+Exercice 8.2
+Quel résultat produira cet algorithme ?
+Tableau X(1, 2) en Entier
+Variables i, j, val en Entier
+Début
+Val ← 1
+Pour i ← 0 à 1
+Pour j ← 0 à 2
+X(i, j) ← Val
+Val ← Val + 1
+j Suivant
+i Suivant
+Pour i ← 0 à 1
+Pour j ← 0 à 2
+Ecrire X(i, j)
+j Suivant
+i Suivant
+Fin
+
+X(0, 0) = 1
+X(0, 1) = 2
+X(0, 2) = 3
+X(1, 0) = 4
+X(1, 1) = 5
+X(1, 2) = 6
+
+
+Exercice 8.3
+Quel résultat produira cet algorithme ?
+Tableau X(1, 2) en Entier
+Variables i, j, val en Entier
+Début
+Val ← 1
+Pour i ← 0 à 1
+Pour j ← 0 à 2
+X(i, j) ← Val
+Val ← Val + 1
+j Suivant
+i Suivant
+Pour j ← 0 à 2
+Pour i ← 0 à 1
+Ecrire X(i, j)
+i Suivant
+j Suivant
+Fin
+
+X(0, 0) = 1
+X(1, 0) = 4
+X(0, 1) = 2
+X(1, 1) = 5
+X(0, 2) = 3
+X(1, 2) = 6
+
+
+Exercice 8.4
+Quel résultat produira cet algorithme ?
+Tableau T(3, 1) en Entier
+Variables k, m, en Entier
+Début
+Pour k ← 0 à 3
+Pour m ← 0 à 1
+T(k, m) ← k + m
+m Suivant
+k Suivant
+Pour k ← 0 à 3
+Pour m ← 0 à 1
+Ecrire T(k, m)
+m Suivant
+k Suivant
+Fin
+
+T(0, 0) = 0
+T(0, 1) = 1
+T(1, 0) = 1
+T(1, 1) = 2
+T(2, 0) = 2
+T(2, 1) = 3
+T(3, 0) = 3
+T(3, 1) = 4
+
+Exercice 8.5
+Mêmes questions, en remplaçant la ligne :
+T(k, m) ← k + m
+par
+a) T(k, m) ← 2 * k + (m + 1)
+b) T(k, m) ← (k + 1) + 4 * m
+
+T(0, 0) = 1
+T(0, 1) = 2
+T(1, 0) = 3
+T(1, 1) = 4
+T(2, 0) = 5
+T(2, 1) = 6
+T(3, 0) = 7
+T(3, 1) = 8
+
+//
+T(0, 0) = 1
+T(0, 1) = 5
+T(1, 0) = 2
+T(1, 1) = 6
+T(2, 0) = 3
+T(2, 1) = 7
+T(3, 0) = 4
+T(3, 1) = 8
+//
+
+
+Exercice 8.6
+Soit un tableau T à deux dimensions (12, 8) préalablement rempli de valeurs numériques.
+Ecrire un algorithme qui recherche la plus grande valeur au sein de ce tableau.
+
+
+//
+
+Variables i, j, iMax, jMax en Numérique
+Tableau T(12, 8) en Numérique
+Le principe de la recherche dans un tableau à deux dimensions est strictement le même que
+dans un tableau à une dimension, ce qui ne doit pas nous étonner. La seule chose qui change,
+c'est qu'ici le balayage requiert deux boucles imbriquées, au lieu d'une seule.
+Debut
+...
+iMax ← 0
+jMax ← 0
+Pour i ← 0 à 12
+Pour j ← 0 à 8
+Si T(i,j) > T(iMax,jMax) Alors
+iMax ← i
+jMax ← j
+FinSi
+j Suivant
+i Suivant
+Ecrire "Le plus grand élément est", T(iMax, jMax)
+Ecrire "Il se trouve aux indices", iMax, " ", jMax
+Fin
+
+//
+
+Exercice 8.7
+Ecrire un algorithme de jeu de dames très simplifié.
+L’ordinateur demande à l’utilisateur dans quelle case se trouve son pion (quelle ligne,
+quelle colonne). On met en place un contrôle de saisie afin de vérifier la validité des
+valeurs entrées.
+Ensuite, on demande à l’utilisateur quel mouvement il veut effectuer : 0 (en haut à
+gauche), 1 (en haut à droite), 2 (en bas à gauche), 3 (en bas à droite).
+Si le mouvement est impossible (i.e. on sort du damier ), on le signale à l’utilisateur et on
+s’arrête là . Sinon, on déplace le pion et on affiche le damier résultant, en affichant un
+« O » pour une case vide et un « X » pour la case où se trouve le pion.
+
+//
+Variables i, j , posi, posj, i2, j2 en Entier
+Variables Correct, MoveOK en Booléen
+Tableau Damier(7, 7) en Booléen
+Tableau Mouv(3, 1) en Entier
+Le damier contenant un seul pion, on choisit de le coder à l'économie, en le représentant par un
+tableau de booléens à deux dimensions. Dans chacun des emplacements de ce damier, Faux
+signifie l'absence du pion, Vrai sa présence
+Par ailleurs, on emploie une méchante astuce, pas obligatoire, mais bien pratique dans beaucoup
+de situations. L'idée est de faire correspondre les choix possibles de l'utilisateur avec les
+mouvements du pion. On entre donc dans un tableau Mouv à deux dimensions, les déplacements
+du pion selon les quatre direction, en prenant soin que chaque ligne du tableau corresponde à
+une saisie de l’utilisateur. La première valeur étant le déplacement en i, la seconde le
+déplacement en j. Ceci nous épargnera par la suite de faire quatre fois les mêmes tests.
+Debut
+Choix 0 : pion en haut à droite
+Mouv(0, 0) ← -1
+Mouv(0, 1) ← -1
+Choix 1 : pion en haut à droite
+Mouv(1, 0) ← -1
+Mouv(1, 1) ← 1
+Choix 2 : pion en bas à gauche
+Mouv(2, 0) ← 1
+Mouv(2, 1) ← -1
+Choix 3 : pion en bas à droite
+Mouv(3, 0) ← 1
+Mouv(3, 1) ← 1
+Initialisation du damier ; le pion n’est pour le moment nulle part
+Pour i ← 0 à 7
+Pour j ← 0 à 7
+Damier(i, j) ← Faux
+j suivant
+i suivant
+Saisie de la coordonnée en i ("posi") avec contrôle de saisie
+Correct ← Faux
+TantQue Non Correct
+Ecrire “Entrez la ligne de votre pion : “
+Lire posi
+Si posi >= 0 et posi <= 7 alors
+Correct = vrai
+Finsi
+Fintantque
+Saisie de la coordonnée en j ("posj") avec contrôle de saisie
+Correct ← Faux
+TantQue Non Correct
+Ecrire “Entrez la colonne de votre pion : “
+Lire posj
+Si posj >= 0 et posj <= 7 alors
+Correct = vrai
+Finsi
+Fintantque
+Positionnement du pion sur le damier virtuel.
+Damier(posi, posj) ← Vrai
+Saisie du déplacement, avec contrôle
+Ecrire “Quel déplacement ?“
+Ecrire “ - 0 : en haut à gauche“
+Ecrire “ - 1 : en haut à droite“
+Ecrire “ - 2 : en bas à gauche“
+Ecrire “ - 3 : en bas à droite“
+Correct ← Faux
+TantQue Non Correct
+Lire Dep
+Si Dep >= 0 et Dep <= 3 alors
+Correct ← Vrai
+FinSi
+FinTantQue
+i2 et j2 sont les futures coordonnées du pion. La variable booléenne MoveOK vérifie la validité de
+ce futur emplacement
+i2 ← posi + Mouv(Dep, 0)
+j2 ← posj + Mouv(Dep, 1)
+MoveOK ← i2 >= 0 et i2 <= 7 et j2 >= 0 et j2 <= 7
+Cas où le déplacement est valide
+Si MoveOK Alors
+Damier(posi, posj) ← Faux
+Damier(i2, j2) ← Vrai
+Affichage du nouveau damier
+Pour i ← 0 à 7
+Pour j ← 0 à 7
+Si Damier(i, j) Alors
+Ecrire “ O “ ;
+Sinon
+Ecrire “ X “ ;
+FinSi
+j suivant
+Ecrire ““
+i suivant
+Sinon
+Cas où le déplacement n’est pas valide
+Ecrire “Mouvement impossible“
+FinSi
+Fin
+//
+

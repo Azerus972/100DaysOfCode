@@ -1,0 +1,77 @@
+FreeCodeCamp 
+
+Revision Bootstrap
+
+Use Responsive Design with Bootstrap Fluid Containers Complete
+
+Make Images Mobile Responsive Complete
+
+Center Text with Bootstrap Complete
+
+Create a Bootstrap Button Complete
+
+Create a Block Element Bootstrap Button Complete
+
+Taste the Bootstrap Button Color Rainbow Complete
+
+Call out Optional Actions with Button Info Complete
+
+Warn your Users of a Dangerous Action Complete
+
+Use the Bootstrap Grid to Put Elements Side By Side Complete
+
+Ditch Custom CSS for Bootstrap Complete
+
+Use Spans for Inline Elements Complete
+
+Create a Custom Heading Complete
+
+Add Font Awesome Icons to our Buttons Complete
+
+Add Font Awesome Icons to all of our Buttons Complete
+
+Responsively Style Radio Buttons Complete
+
+Responsively Style Checkboxes Complete
+
+Style Text Inputs as Form Controls Complete
+
+Line up Form Elements Responsively with Bootstrap Complete
+
+Create a Bootstrap Headline Complete
+
+House our page within a Bootstrap Container Fluid Div Complete
+
+Create a Bootstrap Row Complete
+
+Split your Bootstrap Row Complete
+
+Create Bootstrap Wells Complete
+
+Add Elements within your Bootstrap Wells Complete
+
+Apply the Default Bootstrap Button Style Complete
+
+Create a Class to Target with jQuery Selectors Complete
+
+Add ID Attributes to Bootstrap Elements Complete
+
+Label Bootstrap Wells Complete
+
+Give Each Element a Unique ID Complete
+
+Label Bootstrap Buttons Complete
+
+Use Comments to Clarify Code
+
+
+
+
+
+
+
+
+
+
+
+
