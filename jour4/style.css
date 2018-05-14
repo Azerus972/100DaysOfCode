@@ -1,0 +1,119 @@
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script|Ledger';
+body {
+    background-color: #ccc;
+    font-family: Ledger, serif;
+}
+
+.container {
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.site-title {
+    background-color: #252627;
+    margin: 0 -15px;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.site-title h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #904E55;
+    margin: 0;
+    font-size: 60px;
+}
+
+.site-title p {
+    font-size: 18px;
+}
+
+.site-main-photo {
+    margin-top: 20px;
+    height: 350px;
+    background-image: url('frida.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.content {
+    margin: 20px 0 0 0;
+}
+
+h2 {
+    color: #904E55;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    color: #252627;
+}
+
+.sidebar p {
+    color: #564E58;
+}
+
+blockquote {
+    padding: 60px;
+    background-color: #904E55;
+    color: #fff;
+}
+
+blockquote .writer {
+    font-size: 14px;
+    text-align: right;
+}
+
+p {
+    font-size: 17px;
+}
+
+.dropcaps::first-letter {
+    font-size: 50px;
+    float: left;
+    margin: -10px 15px 0 0;
+}
+
+.imggroup {}
+
+img {
+    border: 1px solid #ddd;
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.imgcaption {
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+footer {
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+a {
+    text-decoration: underline;
+    color: #904E55;
+}
+
+a:hover {
+    color: #000;
+}
