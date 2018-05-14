@@ -1,6 +1,6 @@
 # 100DaysOfCode
 
-Jour 1: Retour sur les bases : algorithmique
+# Jour 1: Retour sur les bases : algorithmique
 
 PRÉAMBULE
 (LE CODAGE )--------------------------------------------------------------------------------------- 1
@@ -64,7 +64,7 @@ PARTIE 5
 
 
 
-Jour 2: Retour sur les bases : algorithmique(suite)
+# Jour 2: Retour sur les bases : algorithmique(suite)
 
 PARTIE 6 (LES TABLEAUX) ---------------------------------------------------------------------------------------- 49
 1. Utilité des tableaux -------------------------------------------------------------------------------------------------------- 49
@@ -82,7 +82,7 @@ PARTIE 8 (TABLEAUX MULTIDIMENSIONNELS)------------------------------------------
 2. Tableaux à deux dimensions -------------------------------------------------------------------------------------------- 63
 3. Tableaux à n dimensions------------------------------------------------------------------------------------------------- 66
 
-Jour 3 FreeCodeCamp
+# Jour 3 FreeCodeCamp
 
 Revision HTML5 & CSS
 
@@ -199,12 +199,12 @@ Target a Specific Child of an Element Using jQuery Complete,
 Target Even Numbered Elements Using jQuery Complete,
 Use jQuery to Modify the Entire Page,
 
-Jour 4 Challenge FreeCodeCamp:
+# Jour 4 Challenge FreeCodeCamp:
 
 Tribute page,
 Laravel projet world cup initialisation du projet/creation bdd/1eres Vues
 
-Jour 5: 
+# Jour 5: 
 
 Cours Algo
 
