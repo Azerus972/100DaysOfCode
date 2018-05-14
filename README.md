@@ -81,3 +81,145 @@ PARTIE 8 (TABLEAUX MULTIDIMENSIONNELS)------------------------------------------
 1. Pourquoi plusieurs dimensions ?--------------------------------------------------------------------------------------- 62
 2. Tableaux à deux dimensions -------------------------------------------------------------------------------------------- 63
 3. Tableaux à n dimensions------------------------------------------------------------------------------------------------- 66
+
+Jour 3 FreeCodeCamp
+
+Revision HTML5 & CSS
+
+Learn How freeCodeCamp Works Complete
+Say Hello to HTML Elements Complete
+Headline with the h2 Element Complete
+Inform with the Paragraph Element Complete
+Uncomment HTML Complete
+Comment out HTML Complete
+Fill in the Blank with Placeholder Text Complete
+Delete HTML Elements Complete
+Change the Color of Text Complete
+Join a freeCodeCamp Study Group in Your City Complete
+Become a Supporter Complete
+Use CSS Selectors to Style Elements Complete
+Use a CSS Class to Style an Element Complete
+Style Multiple Elements with a CSS Class Complete
+Change the Font Size of an Element Complete
+Set the Font Family of an Element Complete
+Import a Google Font Complete
+Specify How Fonts Should Degrade Complete
+Add Images to your Website Complete
+Size your Images Complete
+Add Borders Around your Elements Complete
+Add Rounded Corners with a Border Radius Complete
+Make Circular Images with a Border Radius Complete
+Link to External Pages with Anchor Elements Complete
+Nest an Anchor Element within a Paragraph Complete
+Make Dead Links using the Hash Symbol Complete
+Turn an Image into a Link Complete
+Create a Bulleted Unordered List Complete
+Create an Ordered List Complete
+Create a Text Field Complete
+Add Placeholder Text to a Text Field Complete
+Create a Form Element Complete
+Add a Submit Button to a Form Complete
+Use HTML5 to Require a Field Complete
+Create a Set of Radio Buttons Complete
+Create a Set of Checkboxes Complete
+Check Radio Buttons and Checkboxes by Default Complete
+Nest Many Elements within a Single Div Element Complete
+Give a Background Color to a Div Element Complete
+Set the ID of an Element Complete
+Use an ID Attribute to Style an Element Complete
+Adjusting the Padding of an Element Complete
+Adjust the Margin of an Element Complete
+Add a Negative Margin to an Element Complete
+Add Different Padding to Each Side of an Element Complete
+Add Different Margins to Each Side of an Element Complete
+Use Clockwise Notation to Specify the Padding of an Element Complete
+Use Clockwise Notation to Specify the Margin of an Element Complete
+Style the HTML Body Element Complete
+Inherit Styles from the Body Element Complete
+Prioritize One Style Over Another Complete
+Override Styles in Subsequent CSS Complete
+Override Class Declarations by Styling ID Attributes Complete
+Override Class Declarations with Inline Styles Complete
+Override All Other Styles by using Important Complete
+Use Hex Code for Specific Colors Complete
+Use Hex Code to Mix Colors Complete
+Use Abbreviated Hex Code Complete
+Use RGB values to Color Elements Complete
+Use RGB to Mix Colors
+
+Revision Bootstrap
+
+Use Responsive Design with Bootstrap Fluid Containers Complete
+Make Images Mobile Responsive Complete
+Center Text with Bootstrap Complete
+Create a Bootstrap Button Complete
+Create a Block Element Bootstrap Button Complete
+Taste the Bootstrap Button Color Rainbow Complete
+Call out Optional Actions with Button Info Complete
+Warn your Users of a Dangerous Action Complete
+Use the Bootstrap Grid to Put Elements Side By Side Complete
+Ditch Custom CSS for Bootstrap Complete
+Use Spans for Inline Elements Complete
+Create a Custom Heading Complete
+Add Font Awesome Icons to our Buttons Complete
+Add Font Awesome Icons to all of our Buttons Complete
+Responsively Style Radio Buttons Complete
+Responsively Style Checkboxes Complete
+Style Text Inputs as Form Controls Complete
+Line up Form Elements Responsively with Bootstrap Complete
+Create a Bootstrap Headline Complete
+House our page within a Bootstrap Container Fluid Div Complete
+Create a Bootstrap Row Complete
+Split your Bootstrap Row Complete
+Create Bootstrap Wells Complete
+Add Elements within your Bootstrap Wells Complete
+Apply the Default Bootstrap Button Style Complete
+Create a Class to Target with jQuery Selectors Complete
+Add ID Attributes to Bootstrap Elements Complete
+
+
+Revision Jquery
+
+Learn how Script Tags and Document Ready Work Complete
+Target HTML Elements with Selectors Using jQuery Complete
+Target Elements by Class Using jQuery Complete
+Target Elements by ID Using jQuery Complete
+Delete your jQuery Functions Complete
+Target the same element with multiple jQuery Selectors Complete
+Remove Classes from an element with jQuery Complete
+Change the CSS of an Element Using jQuery Complete
+Disable an Element Using jQuery Complete
+Change Text Inside an Element Using jQuery Complete
+Remove an Element Using jQuery Complete
+Use appendTo to Move Elements with jQuery Complete
+Clone an Element Using jQuery Complete
+Target the Parent of an Element Using jQuery Complete
+Target the Children of an Element Using jQuery Complete
+Target a Specific Child of an Element Using jQuery Complete
+Target Even Numbered Elements Using jQuery Complete
+Use jQuery to Modify the Entire Page
+
+Jour 4 Challenge FreeCodeCamp:
+
+Tribute page
+Laravel projet world cup initialisation du projet/creation bdd/1eres Vues
+
+Jour 5: 
+
+Cours Algo
+
+PARTIE 9 (LES FONCTIONS PRÉDÉFINIES) ---------------------------------------------------------------------- 67
+1. Structure générale des fonctions --------------------------------------------------------------------------------------- 67
+2. Les fonctions de texte ----------------------------------------------------------------------------------------------------- 68
+3. Trois fonctions numériques classiques -------------------------------------------------------------------------------- 70
+4. Les fonctions de conversion --------------------------------------------------------------------------------------------- 73
+PARTIE 10 (LES FICHIERS) -------------------------------------------------------------------------------------- 74
+1. Organisation des fichiers --------------------------------------------------------------------------------------------- 74
+2. Structure des enregistrements ------------------------------------------------------------------------------------------ 75
+3. Types d’accès ---------------------------------------------------------------------------------------------------------------76
+4. Instructions (fichiers texte en accès séquentiel) --------------------------------------------------------------------- 77
+5. Stratégies de traitement --------------------------------------------------------------------------------------------------80
+6. Données structurées------------------------------------------------------------------------------------------------------- 81
+6.1. Données structurées simples------------------------------------------------------------------------------------------------------81
+6.2. Tableaux de données structurées-------------------------------------------------------------------------------------------------83
+7. Récapitulatif général------------------------------------------------------------------------------------------------------84
