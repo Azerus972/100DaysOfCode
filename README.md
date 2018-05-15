@@ -229,7 +229,7 @@ Creation appli vuejs add + delete todolist
 # Jour 6:
 
 Lecture :
-Guide to Test-Driven Development
+Guide to Test-Driven Development :https://code.tutsplus.com/tutorials/the-newbies-guide-to-test-driven-development--net-13835
 
 Creation de tests sur phpunit: Model/Controller
 
