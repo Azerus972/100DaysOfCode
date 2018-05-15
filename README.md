@@ -225,3 +225,12 @@ PARTIE 10 (LES FICHIERS) -------------------------------------------------------
 7. Récapitulatif général------------------------------------------------------------------------------------------------------84
 
 Creation appli vuejs add + delete todolist
+
+# Jour 6:
+
+Lecture :
+Guide to Test-Driven Development
+
+Creation de tests sur phpunit: Model/Controller
+
+Suivi du cours: Cybersecurity and Its Ten Domains par University System of Georgia (semaine 1)
