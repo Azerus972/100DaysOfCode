@@ -1,0 +1,777 @@
+Exercice 1.1
+Quelles seront les valeurs des variables A et B après exécution des instructions
+suivantes ?
+Variables A, B en Entier
+Début
+A ← 1
+B ← A + 3
+A ← 3
+Fin
+
+A ← 1
+B ← A + 3
+A ← 3
+
+Exercice 1.2
+Quelles seront les valeurs des variables A, B et C après exécution des
+instructions suivantes ?
+Variables A, B, C en Entier
+Début
+A ← 5
+B ← 3
+C ← A + B
+A ← 2
+C ← B – A
+Fin
+
+A ← 5
+B ← 3
+C ← A + B
+A ← 2
+C ← B – A
+
+Exercice 1.3
+Quelles seront les valeurs des variables A et B après exécution des instructions
+suivantes ?
+Variables A, B en Entier
+Début
+A ← 5
+B ← A + 4
+A ← A + 1
+B ← A – 4
+Fin
+
+A ← 5
+B ← A + 4
+A ← A + 1
+B ← A – 4
+
+Exercice 1.4
+Quelles seront les valeurs des variables A, B et C après exécution des
+instructions suivantes ?
+Variables A, B, C en Entier
+Début
+A ← 3
+B ← 10
+C ← A + B
+B ← A + B
+A ← C
+Fin
+
+A ← 3
+B ← 10
+C ← A + B
+B ← A + B
+A ← C
+
+Exercice 1.5
+Quelles seront les valeurs des variables A et B après exécution des instructions
+suivantes ?
+Variables A, B en Entier
+Début
+A ← 5
+B ← 2
+A ← B
+B ← A
+Fin
+Moralité : les deux dernières instructions permettent-elles d’échanger les deux
+valeurs de B et A ? Si l’on inverse les deux dernières instructions, cela changet-
+il quelque chose ? NON
+
+A ← 5
+B ← 2
+A ← B
+B ← A
+
+Exercice 1.6
+Plus difficile, mais c’est un classique absolu, qu’il faut absolument maîtriser :
+écrire un algorithme permettant d’échanger les valeurs de deux variables A et
+B, et ce quel que soit leur contenu préalable.
+
+Début
+C ← A
+A ← B
+B ← C
+Fin
+
+Exercice 1.7
+Une variante du précédent : on dispose de trois variables A, B et C. Ecrivez un
+algorithme transférant à B la valeur de A, à C la valeur de B et à A la valeur de
+C (toujours quels que soient les contenus préalables de ces variables).
+
+Début
+…
+D ← C
+C ← B
+B ← A
+A ← D
+Fin
+
+Exercice 1.8
+Que produit l’algorithme suivant ?
+Variables A, B, C en Caractères
+Début
+A ← “423“
+B ← “12”
+C ← A + B
+Fin
+
+une erreur
+
+Exercice 1.9
+Que produit l’algorithme suivant ?
+Variables A, B en Caractères
+Début
+A ← “423“
+B ← “12”
+C ← A & B
+Fin
+
+42312
+
+Exercice 2.1
+Quel résultat produit le programme suivant ?
+Variables val, double numériques
+Début
+Val ← 231
+Double ← Val * 2
+Ecrire Val
+Ecrire Double
+Fin
+
+231
+462
+
+Exercice 2.2
+Ecrire un programme qui demande un nombre à l’utilisateur, puis qui calcule et affiche le
+carré de ce nombre.
+
+Ecrire “Entrez un nombre :”
+Lire nb
+carr ← nb * nb
+Ecrire “Son carré est : ”, carr
+Fin
+
+Exercice 2.3
+Ecrire un programme qui lit le prix HT d’un article, le nombre d’articles et le taux de TVA,
+et qui fournit le prix total TTC correspondant. Faire en sorte que des libellés apparaissent
+clairement.
+
+Ecrire “Entrez le prix hors taxes :”
+Lire pht
+Ecrire “Entrez le nombre d’articles :”
+Lire nb
+Ecrire “Entrez le taux de TVA :”
+Lire ttva
+pttc ← nb * pht * (1 + ttva)
+Ecrire “Le prix toutes taxes est : ”, pttc
+Fin
+
+
+Exercice 2.4
+Ecrire un algorithme utilisant des variables de type chaîne de caractères, et affichant
+quatre variantes possibles de la célèbre « belle marquise, vos beaux yeux me font mourir
+d’amour ». On ne se soucie pas de la ponctuation, ni des majuscules.
+
+Début
+t1 ← “belle Marquise”
+t2 ← “vos beaux yeux”
+t3 ← “me font mourir”
+t4 ← “d’amour”
+Ecrire t1 & " " & t2 & " " & t3 & " " & t4
+Ecrire t3 & " " & t2 & " " & t4 & " " & t1
+Ecrire t2 & " " & t3 & " " & t1 & " " & t4
+Ecrire t4 & " " & t1 & " " & t2 & " " & t3
+Fin
+
+
+Exercice 3.1
+Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si
+ce nombre est positif ou négatif (on laisse de côté le cas où le nombre vaut zéro).
+
+Début
+Ecrire “Entrez un nombre : ”
+Lire n
+Si n > 0 Alors
+Ecrire “Ce nombre est positif”
+Sinon
+Ecrire “Ce nombre est négatif”
+Finsi
+Fin
+
+Exercice 3.2
+Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si
+leur produit est négatif ou positif (on laisse de côté le cas où le produit est nul).
+Attention toutefois : on ne doit pas calculer le produit des deux nombres.
+
+Début
+Ecrire “Entrez deux nombres : ”
+Lire m, n
+Si (m > 0 ET n > 0) OU (m < 0 ET n < 0) Alors
+Ecrire “Leur produit est positif”
+Sinon
+Ecrire “Leur produit est négatif”
+Finsi
+Fin
+
+Exercice 3.3
+Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils
+sont rangés ou non dans l’ordre alphabétique.
+
+
+Début
+Ecrire “Entrez successivement trois noms : ”
+Lire a, b, c
+Si a < b et b < c Alors
+Ecrire “Ces noms sont classés alphabétiquement”
+Sinon
+Ecrire “Ces noms ne sont pas classés”
+Finsi
+Fin
+
+Exercice 3.4
+Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce
+nombre est positif ou négatif (on inclut cette fois le traitement du cas où le nombre vaut
+zéro).
+
+Début
+Ecrire “Entrez un nombre : ”
+Lire n
+Si n < 0 Alors
+Ecrire “Ce nombre est négatif”
+SinonSi n = 0 Alors
+Ecrire “Ce nombre est nul”
+Sinon
+Ecrire “Ce nombre est positif”
+Finsi
+Fin
+
+Exercice 3.5
+Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si le
+produit est négatif ou positif (on inclut cette fois le traitement du cas où le produit peut
+être nul). Attention toutefois, on ne doit pas calculer le produit !
+
+Début
+Ecrire “Entrez deux nombres : ”
+Lire m, n
+Si m = 0 OU n = 0 Alors
+Ecrire “Le produit est nul”
+SinonSi (m < 0 ET n < 0) OU (m > 0 ET n > 0) Alors
+Ecrire “Le produit est positif”
+Sinon
+Ecrire “Le produit est négatif”
+Finsi
+Fin
+
+Exercice 3.6
+Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. Ensuite, il l’informe
+de sa catégorie :
+- « Poussin » de 6 à 7 ans
+- « Pupille » de 8 à 9 ans
+- « Minime » de 10 à 11 ans
+- « Cadet » après 12 ans
+Peut-on concevoir plusieurs algorithmes équivalents menant à ce résultat ?
+
+Début
+Ecrire “Entrez l’âge de l’enfant : ”
+Lire age
+Si age >= 12 Alors
+Ecrire “Catégorie Cadet”
+SinonSi age >= 10 Alors
+Ecrire “Catégorie Minime”
+SinonSi age >= 8 Alors
+Ecrire “Catégorie Pupille”
+SinonSi age >= 6 Alors
+Ecrire “Catégorie Poussin”
+Finsi
+Fin
+
+Exercice 4.1
+Formulez un algorithme équivalent à l’algorithme suivant :
+Si Tutu > Toto + 4 OU Tata = “OK“ Alors
+Tutu ← Tutu + 1
+Sinon
+Tutu ← Tutu – 1
+Finsi
+
+Si Tutu <= Toto + 4 et Tata <> “OK“ Alors
+Tutu ← Tutu - 1
+Sinon
+Tutu ← Tutu + 1
+Finsi
+
+Exercice 4.2
+Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard.
+Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre : "Dans une minute, il
+sera 21 heure(s) 33".
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+
+Début
+Ecrire “Entrez les heures, puis les minutes : ”
+Lire h, m
+m ← m + 1
+Si m = 60 Alors
+m ← 0
+h ← h + 1
+FinSi
+Si h = 24 Alors
+h ← 0
+FinSi
+Ecrire “Dans une minute il sera ”, h, “heure(s) ”, m, “minute(s)”
+Fin
+
+Exercice 4.3
+De même que le précédent, cet algorithme doit demander une heure et en afficher une autre.
+Mais cette fois, il doit gérer également les secondes, et afficher l'heure qu'il sera une seconde
+plus tard.
+Par exemple, si l'utilisateur tape 21, puis 32, puis 8, l'algorithme doit répondre : "Dans une
+seconde, il sera 21 heure(s), 32 minute(s) et 9 seconde(s)".
+NB : là encore, on suppose que l'utilisateur entre une date valide.
+
+Début
+Ecrire “Entrez les heures, puis les minutes, puis les secondes : ”
+Lire h, m, s
+s ← s + 1
+Si s = 60 Alors
+s ← 0
+m ← m + 1
+FinSi
+Si m = 60 Alors
+m ← 0
+h ← h + 1
+FinSi
+Si h = 24 Alors
+h ← 0
+FinSi
+Ecrire “Dans une seconde il sera ”, h, “heure(s)”, m, “minute(s) et ”, s,
+“seconde(s)”
+Fin
+
+Exercice 4.4
+Un magasin de reprographie facture 0,10 E les dix premières photocopies, 0,09 E les vingt
+suivantes et 0,08 E au-delà.
+Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées et qui
+affiche la facture correspondante.
+
+Début
+Ecrire “Nombre de photocopies : ”
+Lire n
+Si n <= 10 Alors
+p ← n * 0,1
+SinonSi n <= 30
+p ← 10 * 0,1 + (n – 10) * 0,09
+Sinon
+p ← 10 * 0,1 + 20 * 0,09 + (n – 30) * 0,08
+FinSi
+Ecrire “Le prix total est : ”, p
+Fin
+
+Exercice 4.5
+Les habitants de Zorglub paient l’impôt selon les règles suivantes :
+· les hommes de plus de 20 ans paient l’impôt
+· les femmes paient l’impôt si elles ont entre 18 et 35 ans
+· les autres ne paient pas d’impôt
+Le programme demandera donc l’âge et le sexe du Zorglubien, et se prononcera donc ensuite
+sur le fait que l’habitant est imposable.
+
+Début
+Ecrire “Entrez le sexe (M/F) : ”
+Lire sex
+Ecrire “Entrez l’âge : ”
+Lire age
+C1 ← sex = “M” et age > 20
+C2 ← sex = “F” et (age > 18 et age < 35)
+Si C1 ou C2 Alors
+Ecrire “Imposable”
+Sinon
+Ecrire “Non Imposable”
+FinSi
+Fin
+
+Exercice 4.6
+Les élections législatives, en Guignolerie Septentrionale, obéissent à la règle suivante :
+- lorsque l'un des candidats obtient plus de 50% des suffrages, il est élu dès le premier tour.
+- en cas de deuxième tour, peuvent participer uniquement les candidats ayant obtenu au
+moins 12,5% des voix au premier tour.
+Vous devez écrire un algorithme qui permette la saisie des scores de quatre candidats au
+premier tour. Cet algorithme traitera ensuite le candidat numéro 1 (et uniquement lui) : il
+dira s'il est élu, battu, s'il se trouve en ballottage favorable (il participe au second tour en
+étant arrivé en tête à l'issue du premier tour) ou défavorable (il participe au second tour
+sans avoir été en tête au premier tour).
+
+Début
+Ecrire “Entrez les scores des quatre prétendants :”
+Lire A, B, C, D
+C1 ← A > 50
+C2 ← B > 50 ou C > 50 ou D > 50
+C3 ← A >= B et A >= B et A >= D
+C4 ← A >= 12,5
+Si C1 Alors
+Ecrire “Elu au premier tour"
+Sinonsi C2 ou Non(C4) Alors
+Ecrire “Battu, éliminé, sorti !!!”
+SinonSi C3 Alors
+Ecrire "Ballotage favorable"
+Sinon
+Ecrire "Ballotage défavorable"
+FinSi
+Fin
+
+Exercice 4.7
+Une compagnie d'assurance automobile propose à ses clients quatre familles de tarifs
+identifiables par une couleur, du moins au plus onéreux : tarifs bleu, vert, orange et rouge.
+Le tarif dépend de la situation du conducteur :
+- un conducteur de moins de 25 ans et titulaire du permis depuis moins de deux ans, se voit
+attribuer le tarif rouge, si toutefois il n'a jamais été responsable d'accident. Sinon, la
+compagnie refuse de l'assurer.
+- un conducteur de moins de 25 ans et titulaire du permis depuis plus de deux ans, ou de
+plus de 25 ans mais titulaire du permis depuis moins de deux ans a le droit au tarif orange
+s'il n'a jamais provoqué d'accident, au tarif rouge pour un accident, sinon il est refusé.
+- un conducteur de plus de 25 ans titulaire du permis depuis plus de deux ans bénéficie du
+tarif vert s'il n'est à l'origine d'aucun accident et du tarif orange pour un accident, du tarif
+rouge pour deux accidents, et refusé au-delà
+De plus, pour encourager la fidélité des clients acceptés, la compagnie propose un contrat
+de la couleur immédiatement la plus avantageuse s'il est entré dans la maison depuis plus
+d'un an.
+Ecrire l'algorithme permettant de saisir les données nécessaires (sans contrôle de saisie) et
+de traiter ce problème. Avant de se lancer à corps perdu dans cet exercice, on pourra
+réfléchir un peu et s'apercevoir qu'ils est plus simple qu'il en a l'air (cela s'appelle faire une
+analyse !)
+
+Début
+Ecrire “Entrez l’âge : ”
+Lire age
+Ecrire “Entrez le nombre d'années de permis : ”
+Lire perm
+Ecrire “Entrez le nombre d'accidents : ”
+Lire acc
+Ecrire “Entrez le nombre d'années d'assurance : ”
+Lire assur
+C1 ← age >= 25
+C2 ← perm >= 2
+C3 ← assur > 1
+Si Non(C1) et Non(C2) Alors
+Si acc = 0 Alors
+situ ← "Rouge"
+Sinon Alors
+situ ← "Refusé"
+FinSi
+Sinonsi ((Non(C1) et C2) ou (C1 et Non(C2)) Alors
+Si acc = 0 Alors
+situ ← "Orange"
+SinonSi acc = 1 Alors
+situ ← "Rouge"
+Sinon
+situ ← "Refusé"
+FinSi
+Sinon
+Si acc = 0 Alors
+situ ← "Vert"
+SinonSi acc = 1 Alors
+situ ← "Orange"
+SinonSi acc = 2 Alors
+situ ← "Rouge"
+Sinon
+situ ← "Refusé"
+FinSi
+FinSi
+Si C3 Alors
+Si situ = "Rouge" Alors
+situ = "Orange"
+SinonSi situ = "Orange" Alors
+situ = "Orange"
+SinonSi situ = "Vert" Alors
+situ = "Bleu"
+FinSi
+FinSi
+Ecrire "Votre situation : ", situ
+Fin
+
+
+Exercice 4.8
+Ecrivez un algorithme qui a près avoir demandé un numéro de jour, de mois et d'année à
+l'utilisateur, renvoie s'il s'agit ou non d'une date valide.
+Cet exercice est certes d’un manque d’originalité affligeant, mais après tout, en
+algorithmique comme ailleurs, il faut connaître ses classiques ! Et quand on a fait cela une
+fois dans sa vie, on apprécie pleinement l’existence d’un type numérique « date » dans
+certains langages…).
+Il n'est sans doute pas inutile de rappeler rapidement que le mois de février compte 28
+jours, sauf si l’année est bissextile, auquel cas il en compte 29. L’année est bissextile si elle
+est divisible par quatre. Toutefois, les années divisibles par 100 ne sont pas bissextiles, mais
+les années divisibles par 400 le sont. Ouf !
+Un dernier petit détail : vous ne savez pas, pour l’instant, exprimer correctement en
+pseudo-code l’idée qu’un nombre A est divisible par un nombre B. Aussi, vous vous
+contenterez d’écrire en bons télégraphistes que A divisible par B se dit « A dp B ».
+
+
+
+Exercice 5.1
+Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 jusqu’à ce que la
+réponse convienne.
+
+Debut
+N ← 0
+Ecrire “Entrez un nombre entre 1 et 3”
+TantQue N < 1 ou N > 3
+Lire N
+Si N < 1 ou N > 3 Alors
+Ecrire “Saisie erronée. Recommencez”
+FinSi
+FinTantQue
+Fin
+
+Exercice 5.2
+Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse
+convienne. En cas de réponse supérieure à 20, on fera apparaître un message : « Plus petit ! », et
+inversement, « Plus grand ! » si le nombre est inférieur à 10.
+
+
+Debut
+N ← 0
+Ecrire “Entrez un nombre entre 10 et 20”
+TantQue N < 10 ou N > 20
+Lire N
+Si N < 10 Alors
+Ecrire “Plus grand !”
+SinonSi N > 20 Alors
+Ecrire “Plus petit !”
+FinSi
+FinTantQue
+Fin
+
+Exercice 5.3
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres
+suivants. Par exemple, si l'utilisateur entre le nombre 17, le programme affichera les nombres de
+18 à 27.
+
+Variables N, i en Entier
+Debut
+Ecrire “Entrez un nombre : ”
+Lire N
+Ecrire “Les 10 nombres suivants sont : ”
+Pour i ← N + 1 à N + 10
+Ecrire i
+i Suivant
+Fin
+
+Exercice 5.4
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de
+multiplication de ce nombre, présentée comme suit (cas où l'utilisateur entre le nombre 7) :
+Table de 7 :
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+…
+7 x 10 = 70
+
+Debut
+Ecrire “Entrez un nombre : ”
+Lire N
+Ecrire “La table de multiplication de ce nombre est : ”
+Pour i ← 1 à 10
+Ecrire N,“ x ”,i, “ = ”, n*i
+i Suivant
+Fin
+
+Exercice 5.5
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule la somme des entiers
+jusqu’à ce nombre. Par exemple, si l’on entre 5, le programme doit calculer :
+1 + 2 + 3 + 4 + 5 = 15
+
+Debut
+Ecrire “Entrez un nombre : ”
+Lire N
+Som ← 0
+Pour i ← 1 à N
+Som ← Som + i
+i Suivant
+Ecrire “La somme est : ”, Som
+Fin
+
+Exercice 5.6
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+NB : la factorielle de 8, notée 8 !, vaut 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
+
+Debut
+Ecrire “Entrez un nombre : ”
+Lire N
+F ← 1
+Pour i ← 2 à N
+F ← F * i
+i Suivant
+Ecrire “La factorielle est : ”, F
+Fin
+
+
+Exercice 5.7
+Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, et qui lui dise
+ensuite quel était le plus grand parmi ces 20 nombres :
+Entrez le nombre numéro 1 : 12
+Entrez le nombre numéro 2 : 14
+Etc.
+Entrez le nombre numéro 20 : 6
+Le plus grand de ces nombres est : 14
+Modifiez ensuite l’algorithme pour que le programme affiche de surcroît en quelle position
+avait été saisie ce nombre :
+C’était le nombre numéro 2
+
+//
+Variables N, i, PG en Entier
+Debut
+PG ← 0
+Pour i ← 1 à 20
+Ecrire “Entrez un nombre : ”
+Lire N
+Si i = 1 ou N > PG Alors
+PG ← N
+FinSi
+i Suivant
+Ecrire “Le nombre le plus grand était : ”, PG
+Fin
+En ligne 3, on peut mettre n’importe quoi dans PG, il suffit que cette variable soit affectée pour que
+le premier passage en ligne 7 ne provoque pas d'erreur.
+Pour la version améliorée, cela donne :
+Variables N, i, PG, IPG en Entier
+Debut
+PG ← 0
+Pour i ← 1 à 20
+Ecrire “Entrez un nombre : ”
+Lire N
+Si i = 1 ou N > PG Alors
+PG ← N
+IPG ← i
+FinSi
+i Suivant
+Ecrire “Le nombre le plus grand était : ”, PG
+Ecrire “Il a été saisi en position numéro ”, IPG
+Fin
+//
+
+Exercice 5.8
+Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien
+l’utilisateur souhaite saisir de nombres. La saisie des nombres s’arrête lorsque l’utilisateur
+entre un zéro.
+
+Debut
+N ← 1
+i ← 0
+PG ← 0
+TantQue N <> 0
+Ecrire “Entrez un nombre : ”
+Lire N
+i ← i + 1
+Si i = 1 ou N > PG Alors
+PG ← N
+IPG ← i
+FinSi
+FinTantQue
+Ecrire “Le nombre le plus grand était : ”, PG
+Ecrire “Il a été saisi en position numéro ”, IPG
+Fin
+
+Exercice 5.9
+Lire la suite des prix (en euros entiers et terminée par zéro) des achats d’un client. Calculer la
+somme qu’il doit, lire la somme qu’il paye, et simuler la remise de la monnaie en affichant les
+textes « 10 E », « 5 E » et « 1 E » autant de fois qu’il y a de coupures de chaque sorte à rendre.
+
+//
+Variables FF, somdue, M, IPG, Reste, Nb10F, Nb5F En Entier
+Debut
+FF ← 1
+somdue ← 0
+TantQue FF <> 0
+Ecrire “Entrez le montant : ”
+Lire FF
+somdue ← somdue + FF
+FinTantQue
+Ecrire “Vous devez :”, FF, “ francs”
+Ecrire ”Montant versé :”
+Lire M
+Reste ← M - FF
+Nb10F ← 0
+TantQue Reste >= 10
+Nb10F ← Nb10F + 1
+Reste ← Reste – 10
+FinTantQue
+Nb5F ← 0
+Si Reste >= 5
+Nb5F ← 1
+Reste ← Reste – 5
+FinSi
+Ecrire “Rendu de la monnaie :”
+Ecrire “Pièces de 10 F : ”, Nb10F
+Ecrire “Pièces de 5 F : ”, Nb5F
+Ecrire “Pièces de 1 F : ”, reste
+Fin
+//
+
+
+Exercice 5.10
+Ecrire un algorithme qui permette de connaître ses chances de gagner au tiercé, quarté,
+quinté et autres impôts volontaires.
+On demande à l’utilisateur le nombre de chevaux partants, et le nombre de chevaux joués.
+Les deux messages affichés devront être :
+Dans l’ordre : une chance sur X de gagner
+Dans le désordre : une chance sur Y de gagner
+X et Y nous sont donnés par la formule suivante, si n est le nombre de chevaux partants et p
+le nombre de chevaux joués :
+X = n ! / (n - p) !
+Y = n ! / (p ! * (n – p) !)
+NB : cet algorithme peut être écrit d’une manière simple, mais relativement peu performante.
+Ses performances peuvent être singulièrement augmentées par une petite astuce. Vous
+commencerez par écrire la manière la plus simple, puis vous identifierez le problème, et
+écrirez une deuxième version
+
+
+Debut
+Ecrire “Entrez le nombre de chevaux partants : ”
+Lire N
+Ecrire “Entrez le nombre de chevaux joués : ”
+Lire P
+Numé ← 1
+Pour i ← 2 à N
+Numé ← Numé * i
+i Suivant
+Déno1 ← 1
+Pour i ← 2 à N-P
+Déno1 ← Déno1 * i
+i Suivant
+Déno2 ← 1
+Pour i ← 2 à P
+Déno2 ← Déno2 * i
+i Suivant
+Ecrire “Dans l’ordre, une chance sur ”, Numé / Déno1
+Ecrire “Dans le désordre, une sur ”, Numé / (Déno1 * Déno2)
+Fin
+
+//
+Cette version, formellement juste, comporte tout de même deux faiblesses.
+La première, et la plus grave, concerne la manière dont elle calcule le résultat final. Celui-ci est le
+quotient d'un nombre par un autre ; or, ces nombres auront rapidement tendance à être très
+grands. En calculant, comme on le fait ici, d'abord le numérateur, puis ensuite le dénominateur, on
+prend le risque de demander à la machine de stocker des nombres trop grands pour qu'elle soit
+capable de les coder (cf. le préambule). C'est d'autant plus bête que rien ne nous oblige à procéder
+ainsi : on n'est pas obligé de passer par la division de deux très grands nombre pour obtenir le
+résultat voulu.
+La deuxième remarque est qu'on a programmé ici trois boucles successives. Or, en y regardant
+bien, on peut voir qu'après simplification de la formule, ces trois boucles comportent le même
+nombre de tours ! (si vous ne me croyez pas, écrivez un exemple de calcul et biffez les nombres
+identiques au numérateur et au dénominateur). Ce triple calcul (ces trois boucles) peut donc être
+ramené(es) à un(e) seul(e). Et voilà le travail, qui est non seulement bien plus court, mais aussi
+plus performant :
+Variables N, P, i, O, F en Entier
+Debut
+Ecrire “Entrez le nombre de chevaux partants : ”
+Lire N
+Ecrire “Entrez le nombre de chevaux joués : ”
+Lire P
+O ← 1
+F ← 1
+Pour i ← P + 1 à N
+O ← O * i
+F ← F * (i – P)
+i Suivant
+Ecrire “Dans l’ordre, une chance sur ”, O
+Ecrire “Dans le désordre, une chance sur ”, O / F
+Fin

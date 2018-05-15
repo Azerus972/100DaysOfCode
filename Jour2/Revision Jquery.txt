@@ -1,0 +1,39 @@
+FreeCodeCamp
+
+Jquery
+
+Learn how Script Tags and Document Ready Work Complete
+
+Target HTML Elements with Selectors Using jQuery Complete
+
+Target Elements by Class Using jQuery Complete
+
+Target Elements by ID Using jQuery Complete
+
+Delete your jQuery Functions Complete
+
+Target the same element with multiple jQuery Selectors Complete
+
+Remove Classes from an element with jQuery Complete
+
+Change the CSS of an Element Using jQuery Complete
+
+Disable an Element Using jQuery Complete
+
+Change Text Inside an Element Using jQuery Complete
+
+Remove an Element Using jQuery Complete
+
+Use appendTo to Move Elements with jQuery Complete
+
+Clone an Element Using jQuery Complete
+
+Target the Parent of an Element Using jQuery Complete
+
+Target the Children of an Element Using jQuery Complete
+
+Target a Specific Child of an Element Using jQuery Complete
+
+Target Even Numbered Elements Using jQuery Complete
+
+Use jQuery to Modify the Entire Page
