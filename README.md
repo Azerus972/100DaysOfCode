@@ -235,3 +235,5 @@ Creation de tests sur phpunit: Model/Controller
 
 Suivi du cours: -Cybersecurity and Its Ten Domains par University System of Georgia (semaine 1)
                 -Testez l'interface de votre site (openclassroom)
+# Jour 7:
+Generate and Download Screenshot of webpage without lossing the styles in Javascript
