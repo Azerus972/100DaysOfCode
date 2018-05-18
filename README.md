@@ -236,4 +236,34 @@ Creation de tests sur phpunit: Model/Controller
 Suivi du cours: -Cybersecurity and Its Ten Domains par University System of Georgia (semaine 1)
                 -Testez l'interface de votre site (openclassroom)
 # Jour 7:
-Generate and Download Screenshot of webpage without lossing the styles in Javascript
+Generate and Download Screenshot of webpage without losing the styles in Javascript
+
+# Jour 8:
+
+Revision bootstrap: cours openclassrooms:Prenez en main Bootstrap
+
+
+Partie 1 - Premiers pas
+
+    1. Mise en route
+    2. Une grille ?
+    3. Un peu de pratique
+
+    Quiz : Quiz 1
+
+Partie 2 - Mise en forme des éléments
+
+    1. Eléments de base
+    2. Les composants intégrés
+
+    Activité : Réalisez une page web simple
+
+Partie 3 - Mise en forme avancée
+
+    1. Les plugins jQuery
+    2. Configurer Bootstrap
+
+    Activité : Réalisez une page web complexe avec des plugins JavaScript
+
+
+
