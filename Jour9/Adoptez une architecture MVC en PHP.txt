@@ -1,0 +1,36 @@
+Adoptez une architecture MVC en PHP
+
+Partie 1 - Isolez ce code que je ne saurais voir
+
+    1. Pourquoi faire un code professionnel ?
+    2. Les limites d'un code de débutant
+    3. Isoler l'affichage du traitement PHP
+    4. Isoler l'accès aux données
+    5. Soigner la cosmétique
+
+    Quiz : Bases de l'isolation du code
+
+Partie 2 - Factorisez votre code dans une architecture MVC
+
+    1. Comment fonctionne une architecture MVC ?
+    2. [Nouvelle fonctionnalité] Afficher des commentaires
+    3. Créer un template de page
+    4. Créer un routeur
+    5. Organiser en dossiers
+    6. [Nouvelle fonctionnalité] Ajouter des commentaires
+    7. Gérer les erreurs
+
+    Quiz : Factoriser un code dans une architecture MVC
+
+Partie 3 - Passez à une architecture MVC orientée objet
+
+    1. Qu'est-ce que la programmation orientée objet ?
+    2. Non mais vraiment, qu'est-ce que la programmation orientée objet ?
+    3. Passage du modèle en objet
+    4. Tirer parti de l'héritage
+    5. Utiliser les namespaces
+    6. Aller plus loin
+
+    Quiz : La programmation orientée objet
+    Activité : Ajouter une fonctionnalité : modifier les commentaires
+
