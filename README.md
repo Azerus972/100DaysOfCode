@@ -270,14 +270,13 @@ Partie 3 - Mise en forme avancée
 # Jour9: LaravelLike
 
 https://github.com/VachetVirginie/LaravelLike
+-Cours OPC: Adoptez une architecture MVC en PHP(revision 1/2)
 
 # Jour10: -LaravelPanneauAdministration
 
 https://github.com/VachetVirginie/LaravelPanneauAdministration
-
-          -Modification style appli laravel de geocoding de graffs sur Lyon
-          
-          -Cours OPC: Adoptez une architecture MVC en PHP
+-Modification style appli laravel de geocoding de graffs sur Lyon
+-Cours OPC: Adoptez une architecture MVC en PHP(revision 2/2)
 
 # Jour11: Intro to Information Security from Georgia Institute of Technology 
 Partie 1 et 2
