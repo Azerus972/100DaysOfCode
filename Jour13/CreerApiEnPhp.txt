@@ -1,0 +1,239 @@
+Qu'est ce qu'une API ?
+
+Une API (Application programming interface) est comme son nom l'indique une interface de programmation. En clair c'est une manière indirecte d'accéder à des données ou à une application externe. Dans notre cas notre API va nous permettre d'accéder à des informations stockées en base de données. En effet nous allons créer une API qui va nous permettre d'aller chercher nos articles avec notre application cliente de manière beaucoup plus simple.
+Etape1 : Pré-requis
+
+Il est à noter que dans la plupart des cas, l'API est installée pour faciliter l'accès aux données distantes via le WEB.
+
+Dans ce tutoriel nous allons créer notre API en local (avec wamp). Wamp fournit une base de données MY SQL par défaut ce qui nous permet de travailler en local sans avoir besoin d'un accès web.
+
+Notre projet va donc s'articuler de la manière suivante : MYSQL -> API (PHP) -> Client.
+Création de la base de donnée
+
+Commençons par créer notre base de données en local que j'ai nommée "api".
+
+Dans un deuxième temps il nous faut créer une table qui va contenir nos articles. je vais appeler cette table: "articles" . Ensuite, j'y ai inséré quatre champs : ID, Titre, Date, Article. J'y ai ajouté quelques articles avec un remplissage exemple "lorem Ipsum" (http://fr.lipsum.com/).
+
+Création du fichier de connexion a la base de données
+
+Pour commencer il faut que notre api puisse communiquer avec notre base de données; il faut donc lui donner les éléments pour se connecter à celle-ci. J'ai mis cette connexion a la base de données dans un fichier a part afin de faciliter l'évolution en cas de changement de base de données par exemple. J'ai nommé ce fichier "Config.php" et il contient le code ci-dessous :
+
+<?php
+
+define("USER", "root");//je défini le nom d'utilisateur pour se connecter à la base de donné
+
+define("PASSWORD", "");//je défini le mot de passe
+
+define("DNS", 'mysql:host=localhost;dbname=api');
+
+try { $pdo = new PDO(DNS, USER, PASSWORD); }//je crée mon objet PDO qui va me servir plus tard pour les requêtes
+
+catch (PDOException $e) {
+
+die($e->getMessage());
+
+}
+
+?>
+
+Comme vous pouvez le constater ce fichier contient donc le nom d'utilisateur, le mot de passe et l'adresse de la base de données afin de se connecter ou de renvoyer une erreur dans le cas contraire.
+Création de notre API
+
+C'est maintenant que les choses sérieuses commencent, Il faut maintenant créer notre API en PHP. pour cela il suffit de créer un nouveau dossier dans le répertoire "WWW" de wamp et d'y ajouter un nouveau fichier PHP nommé "api.php" pour changer ! Ce fichier va donc faire le lien entre notre base de données et notre client. Nous allons implémenter deux fonctionnalités dans notre API :
+
+    Récupérer tous les articles de notre base de données.
+
+    Récupérer l'article qui correspond à un id donné.
+
+Inclusion du fichier de connexion a la base de donné
+
+Pour commencer il faut inclure notre fichier de connexion pour avoir accès à la base de données
+
+require_once 'config.php';
+
+Récupération de tous les articles
+
+Nous allons maintenant créer la fonctionnalité de récupération de tous les articles de notre base de données :
+
+function get_list_articles($pdo) { //je passe en paramètre mon objet PDO précédemment créé afin d'exécuter ma requête
+
+$sql = "SELECT * FROM articles"; $exe = $pdo->query($sql); //création de la requête Sql pour aller chercher tous les articles
+
+$Liste_article = array(); //création d'un tableau qui va contenir tous nos articles
+
+while($result = $exe->fetch(PDO::FETCH_OBJ)) { //Exécution de la requête définie plus haut
+
+array_push($Liste_article, array("ID" => $result->ID, "Titre" => $result->Titre, "Date" => $result->Date)); //on ajoute tous les articles dans notre tableau
+
+}
+
+return $Liste_article; //on renvoie le tableau contenant tous nos articles
+
+}
+Récupération d'un arcticle avec un ID
+
+Nous allons maintenant créer la fonctionnalité de récupération d'un article avec un ID dans notre base de données :
+
+function get_article_by_id($id, $pdo) { //je passe en paramètre de ma fonction l'id de l'article souhaité et l'objet PDO pour exécuter la requête
+
+$sql = "SELECT * FROM articles WHERE ID = ".$id; //je réalise ma requête avec l'ID passée en paramètres
+
+$exe = $pdo->query($sql); //j'exécute ma requête
+
+while($result = $exe->fetch(PDO::FETCH_OBJ)) {
+
+$Detail_article = array("Titre" => $result->Titre, "Date" => $result->Date, "Article" => $result->Article);//je mets le résultat de ma requête dans une variable
+
+}
+
+return $Detail_article; //je retourne l'article en question
+
+}
+
+Redirection et gestion des erreurs
+
+Maintenant que nous avons le code qui permet de récupérer tous les articles ainsi que celui qui permet de récupérer un article en fonction de son ID. Il nous faut maintenant rediriger la demande de l'utilisateur vers une des deux fonctions grace à l'URL et renvoyer une erreur si besoin.
+
+$possible_url = array("get_list_articles", "get_articles"); //je définis les URLs valables
+
+$value = "Une erreur est survenue"; //je mets le message d'erreur par défaut dans une variable
+
+if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url)) { //si l'URL est OK
+
+switch ($_GET["action"]) {
+
+case "get_list_articles": $value = get_list_articles($pdo); break; //Je récupère la liste des articles
+
+case "get_articles": if (isset($_GET["id"])) $value = get_article_by_id($_GET["id"], $pdo); //si l'ID est spécifié alors je renvoie l'article en question
+
+else $value = "Argument manquant"; break; } //si l'ID n'est pas valable je change mon message d'erreur
+
+}
+
+exit(json_encode($value)); //je retourne ma réponse en JSON
+API Fonctionelle
+
+Maintenant que tout le code de notre API est fait il est possible d'utiliser celle-ci ! en accédant à l'URL suivante par exemple : http://localhost/api/api.php?action=get_list_articles
+
+Mais comme vous pouvez le constater le résultat n'est pas très lisible...
+
+C'est pourquoi nous allons mettre en place un petit client web afin d'améliorer le rendu de notre API.
+Création de notre client
+
+Création de la page WEB
+
+Notre client va simplement être une page internet simple qui va appeler les fonctions de notre API et les interpréter afin de les rendre lisibles. Pour commencer il faut créer un fichier nommé "Client Php".
+Récuperation de la liste des articles
+
+La première page de notre client va lister tous les articles en appelant l'URL suivante : http://localhost/api/api.php?action=get_list_articles .
+
+$Liste_article = file_get_contents("http://localhost/api/api.php?action=get_list_articles"); //je récupère les articles via l'URL et stocke cela dans une variable
+
+$Liste_article = json_decode($Liste_article, true); ?> //je décode le JSON
+
+<ul>
+
+<?php foreach ($Liste_article as $app): ?> //je réalise une boucle pour parcourir tous les articles
+
+<li>
+
+<a href=<?php echo "http://localhost/api/REST_Client.php?action=get_articles&id=".$app["ID"] ?> > <?php echo $app["Titre"]." ".$app["Date"]; ?></a> //j'affiche l'ID, le titre et la date des articles
+
+</li>
+
+<?php endforeach; ?>
+
+</ul>
+Récuperation d'un article en particulier
+
+$Detail_article = file_get_contents('http://localhost/api/api.php?action=get_articles&id=' . $_GET["id"]); //Récupération d'un article avec un ID
+
+$Detail_article = json_decode($Detail_article, true); ?> //décodage du JSON
+
+<table>
+
+<tr>
+
+<td>Titre: </td><td> <?php echo $Detail_article["Titre"] ?></td> //j'affiche le titre de l'article
+
+</tr>
+
+<tr> <td>Date de publication: </td><td> <?php echo $Detail_article["Date"] ?></td> </tr>//j'affiche la date de publication de l'article
+
+<tr> <td>Corp de l'article: </td><td> <?php echo $Detail_article["Article"] ?></td> </tr> //j'affiche le corps de l'article
+
+</table> <br/>
+
+<a href="http://localhost/api/REST_Client.php?action=get_list_articles" alt="Liste articles">Retourner a la liste des articles</a>//je fais un lien qui va me permettre de revenir à la liste des articles
+Le client de A a Z
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<body>
+
+<?php if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "get_articles")
+
+{
+
+$Detail_article = file_get_contents('http://localhost/api/api.php?action=get_articles&id=' . $_GET["id"]);
+
+$Detail_article = json_decode($Detail_article, true); ?>
+
+<table>
+
+<tr>
+
+<td>Titre: </td><td> <?php echo $Detail_article["Titre"] ?></td>
+
+</tr>
+
+<tr>
+
+<td>Date de publication: </td><td> <?php echo $Detail_article["Date"] ?></td>
+
+</tr>
+
+<tr>
+
+<td>Corp de l'article: </td><td> <?php echo $Detail_article["Article"] ?></td>
+
+</tr>
+
+</table> <br/>
+
+<a href="http://localhost/api/REST_Client.php?action=get_list_articles" alt="Liste articles">Retourner a la liste des articles</a>
+
+<?php } else
+
+{
+
+$Liste_article = file_get_contents("http://localhost/api/api.php?action=get_list_articles");
+
+$Liste_article = json_decode($Liste_article, true); ?>
+
+<ul>
+
+<?php foreach ($Liste_article as $app): ?>
+
+<li>
+
+<a href=<?php echo "http://localhost/api/REST_Client.php?action=get_articles&id=".$app["ID"] ?> > <?php echo $app["Titre"]." ".$app["Date"]; ?></a>
+
+</li>
+
+<?php endforeach; ?>
+
+</ul>
+
+<?php } ?>
+
+</body>
+
+</html>
+Client fonctionel
+
+Il est maintenant possible d'utiliser notre client en accédant a la page : http://localhost/api/Client.php
+
+Comme vous pouvez le constater nos articles sont facilement visibles ! Le design est certes minimal mais je vous laisse le rendre à votre gout en créant votre fichier CSS de design.
