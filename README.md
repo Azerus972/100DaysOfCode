@@ -286,4 +286,4 @@ Partie 3
 
 # Jour13: Api
 
-# Jour14: Trancking.js: reconnaissance facial
+# Jour14: Tracking.js: reconnaissance facial
