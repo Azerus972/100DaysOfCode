@@ -280,3 +280,6 @@ https://github.com/VachetVirginie/LaravelPanneauAdministration
 
 # Jour11: Intro to Information Security from Georgia Institute of Technology 
 Partie 1 et 2
+
+# Jour12: Intro to Information Security from Georgia Institute of Technology 
+Partie 3
