@@ -1,0 +1,61 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    font: 400 normal 16px/20px Quicksand, sans-serif;
+    background: #292B2A;
+    color: whitesmoke;
+  }
+  #center {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    min-width: 280px;
+    padding: 1rem;
+  }
+  #center h1 {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-weight: 300;
+    font-family: Quicksand;
+  }
+  #center textarea, #center input {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  #center textarea, #center input {
+    border: none;
+    padding: 0.5rem;
+    font: inherit;
+    color: inherit;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  #center .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  #center button {
+    width: 48%;
+    border: none;
+    font: inherit;
+    color: inherit;
+    padding: 0.5rem;
+    cursor: pointer;
+    background: #00B96B;
+  }
+  #center button:hover, #center button:focus {
+    background: #00B96B;
+  }
+  #center button:active {
+    background: #00B96B;
+  }
+  
