@@ -1,0 +1,28 @@
+ 1. Video Time
+2. Recommended Reading
+3. Course Notes
+4. Lesson Introduction
+5. Software Vulnerabilities
+6. Vulnerable Program
+7. Quiz: Stack Access Quiz
+8. Understanding the Stack
+9. Quiz: Attacker Code Quiz
+10. Attacker Code Execution Part 1
+11. Attacker Code Execution Part 2
+12. Attacker Code Execution Part 3
+13. Quiz: Buffer Overflow Quiz
+14. ShellCode
+15. Shellcode Privileges
+16. Quiz: NVD Quiz
+17. Return to libc
+18. Heap Overflows
+19. OpenSSL Heartbleed
+20. Defense Against Buffer Overflow Attacks
+21. Safe Languages
+22. Unsafe Languages
+23. Quiz: Strongly vs Weakly Typed Language Quiz
+24. Analysis Tools
+25. Stack Canary
+26. ASLR
+27. Quiz: Buffer Overflow Attacks Quiz
+28. Lesson Summary
