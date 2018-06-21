@@ -1,0 +1,3 @@
+Détecter un ou plusieurs visages dans une image/vidéo  est désormais possible pour les développeurs web via des api qui permettent de dessiner des rectangles à l’endroit où les visages se trouvent, ainsi que les détails de visage comme arriver à identifier les yeux, la bouche à partir d’une vidéo ou une image.
+
+ La librairie tracking.js présente une solution légère (~7 KB) basée sur des spécifications HTML5 modernes et combinant des algorithmes robustes de computer vision afin de rendre possible un tracking en temps réel des visages, couleurs, objets et autres.
