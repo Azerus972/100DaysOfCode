@@ -288,4 +288,4 @@ Partie 3
 
 # Jour14: Tracking.js: reconnaissance facial
 
-# Jour14: Tracking.js: reconnaissance couleur
+# Jour15: Tracking.js: reconnaissance couleur
