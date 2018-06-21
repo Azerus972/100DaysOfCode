@@ -287,3 +287,5 @@ Partie 3
 # Jour13: Api
 
 # Jour14: Tracking.js: reconnaissance facial
+
+# Jour14: Tracking.js: reconnaissance couleur
