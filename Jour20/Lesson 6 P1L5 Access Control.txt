@@ -1,0 +1,30 @@
+1. Video Time
+2. Recommended Reading
+3. Course Notes
+4. Lesson Introduction
+5. Controlling Accesses to Resources
+6. Access and Authentication
+7. Access Control Matrix Defined
+8. Access Control Matrix
+9. Quiz: Data Confidentiality Quiz
+10. Quiz: Determining Access Quiz
+11. Quiz: Discretionary Access Control Quiz
+12. Implementing Access Control
+13. Example Access Control Matrix
+14. ACL Implementation
+15. C Lists Implementation
+16. ACL and C Lists Implementation ACL vs C list
+17. Quiz: ACE Quiz
+18. Quiz: ACE Access Quiz
+19. Quiz: Revocation of Rights Quiz
+20. Access Control Implementation Part 1
+21. Access Control Implementation SetUID
+22. Access Control Implementation Part 2
+23. How does the OS Implement ACL
+24. Quiz: Time to Check vs Time to Use Quiz
+25. Quiz: Unix File Sharing Quiz
+26. Quiz: SetUID Bit Quiz
+27. Role Based Access Control
+28. Quiz: RBAC Benefits Quiz
+29. Quiz: Access Control Policy Quiz
+30. Lesson Summary
