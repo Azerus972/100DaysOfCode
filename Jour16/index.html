@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <div id="center">
+        <h1>Chiffrer/Dechiffrer</h1><textarea id="message" title="Text to encrypt or decrypt" placeholder="Text to encrypt or decrypt" tabindex="1" autocomplete="off" spellcheck="false" autocapitalize="sentences" autofocus="autofocus"></textarea><input id="key" type="text"
+            tabindex="2" title="text used as key" placeholder="text used as key" inputmode="verbatim" spellcheck="false" autocomplete="off" autocapitalize="none" autocorrect="off" />
+        <div class="buttons"><button id="encode">Chiffrer</button><button id="decode">Dechiffrer</button></div>
+    </div>
+</body>
+<script>
+var xorcipher = String.fromCodePoint ? function (input, key) {
+	var output = '';
+	for (var i = 0; i < input.length; ++i) {
+		output += String.fromCodePoint(input.codePointAt(i) ^ key.codePointAt(i % key.length));
+	}
+	return output;
+} : function (input, key) {
+	var output = '';
+	for (var i = 0; i < input.length; ++i) {
+		output += String.fromCharCode(input.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+	}
+	return output;
+};
+
+document.getElementById('encode').addEventListener('click', function () {
+  var message = document.getElementById('message').value,
+      key = document.getElementById('key').value;
+  document.getElementById('message').value = btoa(xorcipher(message, key));
+}, false);
+
+document.getElementById('decode').addEventListener('click', function () {
+  var message = document.getElementById('message').value,
+      key = document.getElementById('key').value;
+  document.getElementById('message').value = xorcipher(atob(message), key);
+}, false);
+
+</script>
+</html>
