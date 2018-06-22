@@ -278,28 +278,40 @@ https://github.com/VachetVirginie/LaravelPanneauAdministration
 -Modification style appli laravel de geocoding de graffs sur Lyon
 -Cours OPC: Adoptez une architecture MVC en PHP(revision 2/2)
 
-# Jour11: Intro to Information Security from Georgia Institute of Technology 
+# Jour11: 
+Intro to Information Security from Georgia Institute of Technology 
 Partie 1 et 2
 
-# Jour12: Intro to Information Security from Georgia Institute of Technology 
+# Jour12: 
+Intro to Information Security from Georgia Institute of Technology 
 Partie 3
 
-# Jour13: Api
+# Jour13: 
+Api
 
-# Jour14: Tracking.js: reconnaissance facial
+# Jour14: 
+Tracking.js: reconnaissance facial
 
-# Jour15: Tracking.js: reconnaissance couleur
+# Jour15: 
+Tracking.js: reconnaissance couleur
 
-# Jour16: Chiffrer/Dechiffrer: avec Js
+# Jour16: 
+Chiffrer/Dechiffrer: avec Js
 
-# Jour17: mini projet : Un système de commentaires ZendFramework
+# Jour17: 
+mini projet : Un système de commentaires ZendFramework
 
-# Jour18: Intro to Information Security from Georgia Institute of Technology 
+# Jour18: 
+Intro to Information Security from Georgia Institute of Technology 
 Partie 4
 
-# Jour19: Intro to Information Security from Georgia Institute of Technology 
+# Jour19: 
+Intro to Information Security from Georgia Institute of Technology 
 Partie 5
 
-# Jour20: Intro to Information Security from Georgia Institute of Technology 
+# Jour20: 
+Intro to Information Security from Georgia Institute of Technology 
 Lesson 6 P1L5 Access Control
 
+# Jour21:
+Building AR/VR with Javascript and HTML 
