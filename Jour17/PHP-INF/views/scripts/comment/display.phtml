@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Tutoriaux Kitpages</title>
+</head>
+<body>
+commentaires :<br>
+<a href="<?php echo $this->rootUrl;?>/comment/edit">
+Ajouter un commentaire
+</a>
+<hr/>
+<?php foreach ($this->commentList as $comment) { ?>
+<b><?php echo $comment["subject"]; ?> </b>-
+<?php echo $comment["email"]; ?><br/>
+<?php echo $comment["content"]; ?>
+<hr/>
+<?php } ?>
+</body>
+</html>

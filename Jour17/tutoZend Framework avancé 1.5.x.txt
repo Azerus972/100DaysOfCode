@@ -1,0 +1,247 @@
+Ce tutorial demande d'avoir des notions dans les domaines suivant :
+
+    le MVC (model-view-controller)
+    un singleton
+    avoir compris l'initiation au Zend Framework
+
+Il aborde des notions fondamentales du Zend Framework pour celui qui veut créer un site web dynamique :
+
+    Le routeur
+    Le contrôleurLe viewer
+    Les bases de données
+    Le loggeur
+    Les filtres (input filter)
+
+
+Nous allons réaliser un système de commentaires. Cela comprend 2 pages :
+
+    Une page d'ajout d'un commentaire
+    Une page d'affichage de l'ensemble des commentaires
+
+Quand on ajoute un commentaire, on revient sur la liste des commentaires et quand on clique sur "ajouter un commentaire", on va sur le formulaire d'ajout de commentaires.
+
+Pour réaliser cette appli, nous aurons besoin des fichiers suivants :
+
+    index.php (avec des éléments supplémentaires par rapport à l'initiation)
+    CommentController.php (le controller de l'application)
+    Les vues
+        comment/display.phtml (la page qui affiche les messages)
+        comment/edit.phtml (la page qui affiche le formulaire)
+    Kitpages_Tutoriaux_Facade : le modèle de l'application
+
+
+
+Base de données
+
+Pour que l'exemple fonctionne, il faut créer une table dans la base de données :
+
+CREATE TABLE `comment` (
+  `id` int(32) unsigned NOT NULL auto_increment,
+  `email` varchar(200) default NULL,
+  `subject` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB ;
+
+
+Fichier index.php
+
+Le fichier index.php est central. Vous l'avez déjà vu dans l'"initiation au Zend Framework". Voyons ce qui a changé :
+
+    des constantes en plus pour :
+        L'emplacement du fichier de logs
+        La connexion à la base de données
+    L'initialisation du logger
+        On voit l'initialisation du logger avec notamment le Zend_Log_Writer_Stream
+        On voit comment utiliser le logger
+        Note : dans la vraie vie, il faudra mettre en place un système plus malin que le logger dans la registry, parce que ça serait infernal de taper une ligne aussi longue pour envoyer un log...
+    L'ajout d'une route dans le routeur
+        La route ajoutée sert à orienter les requêtes du genre http://localhost/Tutoriaux/comment/xxx/yyy vers le controller comment, l'action xxx et envoie la valeur yyy dans le paramètre comment.
+        c'est le RewriteRouteur qui permet de faire ces tours de magie.
+
+
+
+Navigation
+
+    Initiation au ZF
+    ZF Tuto avancé
+    View, setScriptPath
+    Smarty et le ZF
+    Plugins, Helpers, MVC
+    Initiation à Zend_Auth
+    Initiation à Zend_Acl
+    Zend_Translate
+    Pièges et astuces 
+
+Versions
+
+- 8 avril 2008 : Adaptation au ZF 1.5.1 (ajout loadClass)
+- 7 août 2007 : correction du display.phtml sur la page qui ne correspond pas au fichier zip...
+- 3 juil 2007 : adaptation ZF 1.0.0 stable
+- 15 juin 2007 : adaptation ZF 1.0RC2 + refonte pour ViewRenderer
+- 2 juin 2007 : adaptation rapide ZF 1.0RC1
+- 11 mai 2007 : adaptation ZF:0.9.3
+- 5 avril 2007 : correction du zip et utilisation PATH_SEPARATOR
+- Mars 2007 : adaptation au ZF 0.9.x
+- 23 fev 2007 : adaptation ZF 0.8.0 : Zend_Filter, Zend_Validate et RewriteRouter modifiés
+- 12 fev 2007 : traitement exception par controller
+- 19 jan 2007 : adaptation ZF 0.7.0 (pas d'évolution)
+- 2 jan 2007 : adaptation au ZF 0.6.0
+- 2 nov 2006 : adaptation au ZF 0.2.0
+- 18 juillet 2006 : ajout d'un paragraphe sur le lancement de l'appli
+- 13 juillet 2006 : création
+Contactez-nous
+
+Kitpages
+17 rue de la Frise
+38000 Grenoble
+tel : 04 58 00 33 81
+Emai : contact@kitpages.fr
+Par Philippe Le Van (@plv) Dernière mise à jour : 08 April 2008
+Kitpages : Tutorial Zend Framework avancé 1.5.x
+Introduction
+
+Ce tutorial se présente comme la 2e partie de l'initiation au Zend Framework.
+
+Nous avons décidé de présenter un exemple de réalisation très simple (un système d'ajouts de commentaires).
+
+Ce tutorial est nettement plus complexe que le précédent. Il demande d'avoir des notions dans les domaines suivant :
+
+    le MVC (model-view-controller)
+    un singleton
+    avoir compris l'initiation au Zend Framework
+
+Il aborde des notions fondamentales du Zend Framework pour celui qui veut créer un site web dynamique :
+
+    Le routeur
+    Le contrôleurLe viewer
+    Les bases de données
+    Le loggeur
+    Les filtres (input filter)
+
+ 
+
+N'hésitez pas à m'envoyer vos commentaires.
+
+(Restez informés de l'actualité du Zend Framework en vous rendant sur la communauté française du Zend Framework http://www.z-f.fr )
+Le mini projet : Un système de commentaires
+
+Nous allons réaliser un système de commentaires. Cela comprend 2 pages :
+
+    Une page d'ajout d'un commentaire
+    Une page d'affichage de l'ensemble des commentaires
+
+Quand on ajoute un commentaire, on revient sur la liste des commentaires et quand on clique sur "ajouter un commentaire", on va sur le formulaire d'ajout de commentaires.
+
+Pour réaliser cette appli, nous aurons besoin des fichiers suivants :
+
+    index.php (avec des éléments supplémentaires par rapport à l'initiation)
+    CommentController.php (le controller de l'application)
+    Les vues
+        comment/display.phtml (la page qui affiche les messages)
+        comment/edit.phtml (la page qui affiche le formulaire)
+    Kitpages_Tutoriaux_Facade : le modèle de l'application
+
+Organisation des fichiers
+
+L'organisation des fichiers suit l'arborescence définie à droite.
+
+Notons qu'on peut interdire à un internaute l'accès à l'ensemble du répertoire PHP-INF. C'est même conseillé pour des raisons de sécurité. On sait ainsi que son seul point d'entrée est le fichier index.php. C'est l'objet du fichier .htaccess contenu dans le répertoire PHP-INF/.htaccess . Il contient uniquement "Deny from all".
+
+Vous pouvez télécharger cette archive.
+Base de données
+
+Pour que l'exemple fonctionne, il faut créer une table dans la base de données :
+
+CREATE TABLE `comment` (
+  `id` int(32) unsigned NOT NULL auto_increment,
+  `email` varchar(200) default NULL,
+  `subject` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB ;
+
+Le fichier index.php
+
+Le fichier index.php est central. Vous l'avez déjà vu dans l'"initiation au Zend Framework". Voyons ce qui a changé :
+
+    des constantes en plus pour :
+        L'emplacement du fichier de logs
+        La connexion à la base de données
+    L'initialisation du logger
+        On voit l'initialisation du logger avec notamment le Zend_Log_Writer_Stream
+        On voit comment utiliser le logger
+        Note : dans la vraie vie, il faudra mettre en place un système plus malin que le logger dans la registry, parce que ça serait infernal de taper une ligne aussi longue pour envoyer un log...
+    L'ajout d'une route dans le routeur
+        La route ajoutée sert à orienter les requêtes du genre http://localhost/Tutoriaux/comment/xxx/yyy vers le controller comment, l'action xxx et envoie la valeur yyy dans le paramètre comment.
+        c'est le RewriteRouteur qui permet de faire ces tours de magie.
+
+ 
+
+
+
+Le fichier CommentController
+
+Ce fichier contient 2 actions importantes :
+
+    displayAction : action qui redirige vers l'affichage des commentaires
+    editAction : action qui
+        Affiche le formulaire si aucune donnée POST n'est envoyée
+        Enregistre le commentaire en base de donnée si une donnée POST est envoyée (puis affiche la liste des commentaires)
+
+Etudions ces actions dans le détail :
+
+    displayAction
+        Cette action ne fait aucun traitement. Elle se contente d'appeler le fichier (la vue) d'affichage des commentaires (comment/display.phtml)
+    editAction
+        Si aucun formulaire n'a été validé (pas de donnée $_POST envoyée)
+            on affiche simplement la vue du formulaire (comment/edit.phtml)
+        Si un formulaire a été validé
+            On valide les champs du formulaire
+                On valide l'adresse email avec la classe Zend_Validate_EmailAddress
+                On filtre les champs subject et content pour éviter les codes javascript ou autres faille de sécurité. Pour ça on utilise Zend_Filter_StripTags
+            On charge la le modèle de l'application (Kitpages_Tutoriaux_Facade) qui s'occupe des sauvegardes en base de données. Nous y reviendrons plus tard.
+            On fait une redirection vers la page d'affichage des commentaires.
+                Notons que faire une redirection au lieu d'afficher directement la vue permet de pouvoir ensuire faire un "back" sans que le navigateur ne nous demande si on veut renvoyer le POST...
+
+Vue 1 : le formulaire
+
+C'est une vue on ne peut plus simple..., juste de l'html...
+
+Fichier : comment/edit.phtml
+
+Vue 2 : l'affichage des commentaires
+
+Fichier permettant d'afficher les commentaires. Cette vue utilise le modèle (classe Kitpages_Tutoriaux_Facade) pour aller chercher en base de données la liste des commentaires. Nous y reviendrons plus tard.
+
+Fichier : comment/display.phtml
+
+Modèle : Kitpages_Tutoriaux_Facade
+
+Ce paragraphe est intéressant à 2 niveaux :
+
+    Il montre comment se servir des bases de données avec le Zend Framework
+    Il montre comment organiser ses classes pour qu'elles soient accesibles de la même façon que les classes du Zend Framework
+
+Le code est donnée ci dessous, nous allons le commenter plus ou moins dans l'ordre.
+
+    On inclu les classes de bases de données du zend Framework
+    Le include_path de l'application va jusqu'à PHP-INF/model . Nous avons ensuite créé les répertoire Kitpages/Tutoriaux/ et nous avons mis le fichier Facade.php dedans. Nous avons ensuite appelé la classe Kitpages_Tutoriaux_Facade. Tout celà permet de charger la classe dans un autre fichier avec la fonction Zend_Loader::loadClass("Kitpages_Tutoriaux_Facade"); (ça remplace un include_once...)
+    La classe en question est un singleton. C'est à dire qu'on impose le fait qu'il y ait une et une seule instance de la classe en même temps. Cette instance unique se récupère en appelant Kitpages_Tutoriaux_Facade::getInstance()
+    la méthode getZendDb crée une connexion vers la base de données et la renvoie (Création d'une connexion)
+    saveComment(xxx) enregistre un commentaire dans la base de données (Insertion en base)
+    getAllComments() renvoie la liste des commentaires dans l'ordre chronologique (Selection de lignes)
+
+Les liens vers la doc du Zend Framework vont vous aider à comprendre le code, mais surtout ont pour objectif de vous habituer à la consulter...
+
+
+Comment lancer tout ça ?
+
+Une fois que tout est installé, les URL à aller voir sont les suivantes :
+
+http://localhost/Tutoriaux/comment/display : pour voir la liste des messages
+
+http://localhost/Tutoriaux/comment/edit : pour ajouter un message
+
+(ces URL sont définies dans index.php quand j'ajoute une route au routeur).
+

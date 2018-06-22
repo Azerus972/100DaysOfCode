@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Tutoriaux Kitpages</title>
+</head>
+<body>
+<p><?php if (isset($_GET["error"])) {echo $_GET["error"];} ?></p>
+Saisir son commentaire<br/>
+<form action="<?php echo ROOT_URL ?>/comment/edit" method="POST">
+    Email : <input type="text" name="email"/><br>
+    Sujet : <input type="text" name="subject"/><br>
+    Contenu : <textarea name="content"></textarea><br>
+    <input type="submit" value="valider"/>
+</form>
+</body>
+</html>
