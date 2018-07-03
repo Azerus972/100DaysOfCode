@@ -315,3 +315,6 @@ Lesson 6 P1L5 Access Control
 
 # Jour21:
 Building AR/VR with Javascript and HTML 
+
+# Jour22:
+LocalStorageCollapse : stocker la position des elements du menu pour avoir tjs les meme elements ouverts apres fermeture de la page
