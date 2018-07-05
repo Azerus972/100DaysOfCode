@@ -318,3 +318,6 @@ Building AR/VR with Javascript and HTML
 
 # Jour22:
 LocalStorageCollapse : stocker la position des elements du menu pour avoir tjs les meme elements ouverts apres fermeture de la page
+
+# Jour23:
+P1:L6 Mandatory Access Control
