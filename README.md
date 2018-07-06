@@ -320,7 +320,12 @@ Building AR/VR with Javascript and HTML
 LocalStorageCollapse : stocker la position des elements du menu pour avoir tjs les meme elements ouverts apres fermeture de la page
 
 # Jour23:
+Intro to Information Security from Georgia Institute of Technology 
 P1:L6 Mandatory Access Control
 
 # Jour24:
 Cours: Linux Command Line Basics by Udacity
+
+# Jour25:
+Intro to Information Security from Georgia Institute of Technology 
+Lesson 9: P2:L1 Malicious Code
