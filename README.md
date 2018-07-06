@@ -321,3 +321,6 @@ LocalStorageCollapse : stocker la position des elements du menu pour avoir tjs l
 
 # Jour23:
 P1:L6 Mandatory Access Control
+
+# Jour24:
+Cours: Linux Command Line Basics by Udacity
