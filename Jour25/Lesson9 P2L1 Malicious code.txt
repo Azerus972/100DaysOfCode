@@ -1,0 +1,32 @@
+Lesson 9: P2:L1 Malicious Code
+
+   
+
+    1. Video Time
+    2. Recommended Reading
+    3. Course Notes
+    4. Part 2 Introduction
+    5. Lesson Introduction
+    6. Quiz: What is Malware Quiz
+    7. Types of Malware
+    8. Trap Doors
+    9. Logic Bombs
+    10. Trojan Horses
+    11. Viruses
+    12. Quiz: Host Required Malware Quiz 1
+    13. Quiz: Host Required Malware Quiz 2
+    14. Virus Structure
+    15. Types of Viruses
+    16. Boot Sector Virus
+    17. Macro Viruses
+    18. Quiz: Types of Viruses Quiz
+    19. Rootkit
+    20. Quiz: Rootkit Quiz
+    21. Quiz: Truth and Misconceptions Quiz
+    22. Worms
+    23. The Internet Worm
+    24. Quiz: Worm Quiz
+    25. Malware Prevention & Detection Approaches
+    26. Quiz: Malware Prevention & Detection Quiz
+    27. Quiz: Most Expensive Worm Quiz
+    28. Lesson Summary
