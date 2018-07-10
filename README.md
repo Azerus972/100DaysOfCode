@@ -329,3 +329,7 @@ Cours: Linux Command Line Basics by Udacity
 # Jour25:
 Intro to Information Security from Georgia Institute of Technology 
 Lesson 9: P2:L1 Malicious Code
+
+# Jour26:
+Revisions javascript
+Creation d'un jeu: le morpion
