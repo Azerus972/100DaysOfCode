@@ -333,3 +333,15 @@ Lesson 9: P2:L1 Malicious Code
 # Jour26:
 Revisions javascript
 Creation d'un jeu: le morpion
+
+# Jour27:
+Front End Libraries Certification (300 hours)
+Bootstrap
+
+# Jour28:
+Front End Libraries Certification (300 hours)
+jQuery
+
+# Jour29:
+Front End Libraries Certification (300 hours)
+React
