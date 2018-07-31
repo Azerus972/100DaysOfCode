@@ -345,3 +345,4 @@ jQuery
 # Jour29:
 Front End Libraries Certification (300 hours)
 React
+JavaScript: Arrow Functions for Beginners
