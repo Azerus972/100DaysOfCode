@@ -1,0 +1,25 @@
+freecodecamp
+
+Front End Libraries Certification (300 hours)
+
+jQuery
+
+    Introduction to jQuery
+    PassedLearn How Script Tags and Document Ready Work
+    PassedTarget HTML Elements with Selectors Using jQuery
+    PassedTarget Elements by Class Using jQuery
+    PassedTarget Elements by id Using jQuery
+    PassedDelete Your jQuery Functions
+    PassedTarget the Same Element with Multiple jQuery Selectors
+    PassedRemove Classes from an Element with jQuery
+    PassedChange the CSS of an Element Using jQuery
+    PassedDisable an Element Using jQuery
+    PassedChange Text Inside an Element Using jQuery
+    PassedRemove an Element Using jQuery
+    PassedUse appendTo to Move Elements with jQuery
+    PassedClone an Element Using jQuery
+    PassedTarget the Parent of an Element Using jQuery
+    PassedTarget the Children of an Element Using jQuery
+    PassedTarget a Specific Child of an Element Using jQuery
+    PassedTarget Even Elements Using jQuery
+    PassedUse jQuery to Modify the Entire Page

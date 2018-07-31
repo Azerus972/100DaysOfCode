@@ -1,0 +1,39 @@
+freecodecamp
+
+Front End Libraries Certification (300 hours)
+
+Bootstrap
+
+    Introduction to the Bootstrap Challenges
+    PassedUse Responsive Design with Bootstrap Fluid Containers
+    PassedMake Images Mobile Responsive
+    PassedCenter Text with Bootstrap
+    PassedCreate a Bootstrap Button
+    PassedCreate a Block Element Bootstrap Button
+    PassedTaste the Bootstrap Button Color Rainbow
+    PassedCall out Optional Actions with btn-info
+    PassedWarn Your Users of a Dangerous Action with btn-danger
+    PassedUse the Bootstrap Grid to Put Elements Side By Side
+    PassedDitch Custom CSS for Bootstrap
+    PassedUse a span to Target Inline Elements
+    PassedCreate a Custom Heading
+    PassedAdd Font Awesome Icons to our Buttons
+    PassedAdd Font Awesome Icons to all of our Buttons
+    PassedResponsively Style Radio Buttons
+    PassedResponsively Style Checkboxes
+    PassedStyle Text Inputs as Form Controls
+    PassedLine up Form Elements Responsively with Bootstrap
+    PassedCreate a Bootstrap Headline
+    PassedHouse our page within a Bootstrap container-fluid div
+    PassedCreate a Bootstrap Row
+    PassedSplit Your Bootstrap Row
+    PassedCreate Bootstrap Wells
+    PassedAdd Elements within Your Bootstrap Wells
+    PassedApply the Default Bootstrap Button Style
+    PassedCreate a Class to Target with jQuery Selectors
+    PassedAdd id Attributes to Bootstrap Elements
+    PassedLabel Bootstrap Wells
+    PassedGive Each Element a Unique id
+    PassedLabel Bootstrap Buttons
+    PassedUse Comments to Clarify Code
+
